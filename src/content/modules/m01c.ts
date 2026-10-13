@@ -4,10 +4,27 @@ export const m1c = [
   lesson({
     id: 'm1-l17',
     title: 'Vad är joner?',
+    section: 'Joner och bindningar',
     minutes: 9,
     goal: 'Idag ska vi förstå vad en jon är.',
     objectives: ['Förklara att en jon är en laddad atom eller atomgrupp.', 'Förklara att joner bildas när atomer avger eller tar upp elektroner.', 'Avgöra om en partikel är en atom eller en jon.'],
     prerequisites: ['m1-l08', 'm1-l16'],
+    what: [
+      'En **jon** är en atom (eller grupp av atomer) som har en elektrisk laddning, eftersom antalet elektroner inte längre är lika med antalet protoner.',
+    ],
+    why: [
+      'Joner bildas när en atom kan nå ett stabilare läge genom att bli av med eller ta emot några elektroner. Atomer med få valenselektroner blir lättast av med dem; atomer med många tar lättast emot fler.',
+    ],
+    how: [
+      'Avger atomen elektroner får den fler plus än minus → **positiv jon**. Tar den upp elektroner får den fler minus än plus → **negativ jon**.',
+      'Laddningen skrivs uppe till höger: Na⁺, Cl⁻, Mg²⁺. Protonerna ändras aldrig – därför är det fortfarande samma grundämne.',
+    ],
+    where: [
+      'Sportdrycker innehåller "elektrolyter" – det är joner som Na⁺ och K⁺. Kroppen behöver dem bland annat för nervsignaler.',
+    ],
+    misconceptions: [
+      { myth: 'En jon har fått eller förlorat protoner.', truth: 'Det är alltid elektroner som flyttas när joner bildas i kemiska reaktioner. Protonerna ligger kvar i kärnan.' },
+    ],
     simple: [
       'En jon är en atom som har fått en laddning.',
       'Det händer när atomen avger eller tar upp elektroner.',
@@ -43,10 +60,27 @@ export const m1c = [
   lesson({
     id: 'm1-l18',
     title: 'Positiva joner',
+    section: 'Joner och bindningar',
     minutes: 9,
     goal: 'Idag ska vi förstå hur positiva joner bildas.',
     objectives: ['Förklara att positiva joner bildas när atomer avger elektroner.', 'Förutsäga jonladdningen för grupp 1, 2 och 13.', 'Förklara varför strontium bildar Sr²⁺.'],
     prerequisites: ['m1-l17'],
+    what: [
+      'En **positiv jon** bildas när en atom avger en eller flera elektroner. Den har då fler protoner än elektroner.',
+    ],
+    why: [
+      'Metallatomer har få valenselektroner som sitter ganska löst. Det kostar lite energi att bli av med dem, och då får atomen ädelgasstruktur.',
+    ],
+    how: [
+      'Natrium (2, 8, 1) avger 1 elektron → Na⁺ (2, 8). Magnesium (2, 8, 2) avger 2 → Mg²⁺.',
+      'Laddningen räknas som protoner − elektroner: Na⁺ har 11 − 10 = +1.',
+    ],
+    where: [
+      'Kalciumjoner (Ca²⁺) bygger upp ben och tänder. Järnjoner (Fe²⁺) finns i blodets hemoglobin.',
+    ],
+    misconceptions: [
+      { myth: 'Positiv jon = den har fått något extra.', truth: 'Tvärtom. Den har förlorat negativa elektroner, och därför blir plus i överskott.' },
+    ],
     simple: [
       'En positiv jon bildas när en atom avger en eller flera elektroner.',
       'Då finns det fler protoner (+) än elektroner (−).',
@@ -82,10 +116,27 @@ export const m1c = [
   lesson({
     id: 'm1-l19',
     title: 'Negativa joner',
+    section: 'Joner och bindningar',
     minutes: 9,
     goal: 'Idag ska vi förstå hur negativa joner bildas.',
     objectives: ['Förklara att negativa joner bildas när atomer tar upp elektroner.', 'Förutsäga jonladdningen för grupp 15, 16 och 17.', 'Förklara varför svavel bildar S²⁻.'],
     prerequisites: ['m1-l17'],
+    what: [
+      'En **negativ jon** bildas när en atom tar upp en eller flera elektroner. Den har då fler elektroner än protoner.',
+    ],
+    why: [
+      'Ickemetaller har många valenselektroner och ligger nära ett fullt skal. Det är lättare att ta emot några elektroner än att göra sig av med många.',
+    ],
+    how: [
+      'Klor (2, 8, 7) tar upp 1 elektron → Cl⁻ (2, 8, 8). Syre (2, 6) tar upp 2 → O²⁻.',
+      'Negativa joner av ett grundämne får ofta ändelsen **-id**: klorid, oxid, sulfid.',
+    ],
+    where: [
+      'Fluoridjoner (F⁻) i tandkräm stärker tandemaljen. Kloridjoner (Cl⁻) finns i koksalt och i magsaften.',
+    ],
+    misconceptions: [
+      { myth: 'Negativ jon betyder att den har förlorat något.', truth: 'Den har fått extra elektroner. Eftersom elektroner är minus blir jonen negativ.' },
+    ],
     simple: [
       'En negativ jon bildas när en atom tar upp en eller flera elektroner.',
       'Då finns det fler elektroner (−) än protoner (+).',
@@ -121,10 +172,27 @@ export const m1c = [
   lesson({
     id: 'm1-l20',
     title: 'Jonbindning',
+    section: 'Joner och bindningar',
     minutes: 10,
     goal: 'Idag ska vi förstå vad en jonbindning är.',
     objectives: ['Förklara att jonbindning är attraktionen mellan positiva och negativa joner.', 'Beskriva hur natriumklorid bildas.', 'Skriva formeln för enkla jonföreningar.'],
     prerequisites: ['m1-l18', 'm1-l19'],
+    what: [
+      'En **jonbindning** är dragningskraften mellan positiva och negativa joner. Ämnen som hålls ihop så kallas **salter**.',
+    ],
+    why: [
+      'Plus och minus dras till varandra. När en metall ger elektroner till en ickemetall bildas samtidigt plusjoner och minusjoner – och de fastnar i varandra.',
+    ],
+    how: [
+      'Natrium ger 1 elektron till klor → Na⁺ och Cl⁻. Miljarder sådana joner packar ihop sig i ett ordnat mönster, ett **jongitter** – det är ett saltkorn.',
+      'Det finns inga separata "par" i ett salt; varje jon dras till alla grannjoner runt omkring.',
+    ],
+    where: [
+      'Koksalt (NaCl), kalk (CaCO₃) och många mineraler i berggrunden hålls ihop av jonbindningar.',
+    ],
+    misconceptions: [
+      { myth: 'NaCl är en molekyl.', truth: 'Salter består av jongitter, inte molekyler. NaCl anger bara förhållandet: lika många Na⁺ som Cl⁻.' },
+    ],
     simple: [
       'En jonbindning är kraften mellan en positiv och en negativ jon.',
       'Plus och minus dras till varandra och håller ihop.',
@@ -160,10 +228,27 @@ export const m1c = [
   lesson({
     id: 'm1-l21',
     title: 'Molekyler och kovalenta bindningar',
+    section: 'Joner och bindningar',
     minutes: 11,
     goal: 'Idag ska vi förstå vad en molekyl och en kovalent bindning är.',
     objectives: ['Förklara att en kovalent bindning är ett delat elektronpar.', 'Förklara vad en molekyl är.', 'Ge exempel på molekyler som H₂O, CO₂ och CH₄.'],
     prerequisites: ['m1-l16'],
+    what: [
+      'En **molekyl** är två eller fler atomer som sitter ihop genom att de **delar elektroner**. Den sortens bindning kallas **kovalent bindning**.',
+    ],
+    why: [
+      'När två ickemetaller möts vill ingen av dem ge bort elektroner – båda drar hårt i dem. Lösningen blir att dela: ett elektronpar mellan atomerna räknas till båda, så båda får fullare yttersta skal.',
+    ],
+    how: [
+      'Väte (1 elektron) och väte delar sina elektroner → H₂. Syre delar med två väten → H₂O.',
+      'Ett delat elektronpar = en enkelbindning. Atomer kan också dela två eller tre par (dubbel- och trippelbindning), som i O₂ och N₂.',
+    ],
+    where: [
+      'Vatten, koldioxid, socker, DNA och proteiner är alla molekyler. Nästan allt i levande organismer hålls ihop av kovalenta bindningar.',
+    ],
+    misconceptions: [
+      { myth: 'I en molekyl ger en atom elektroner till den andra.', truth: 'Det är jonbindning. I en kovalent bindning delar atomerna på elektronerna.' },
+    ],
     simple: [
       'En molekyl är två eller fler atomer som sitter ihop.',
       'Atomerna hålls ihop genom att de delar elektroner. Det kallas kovalent bindning.',
@@ -199,10 +284,27 @@ export const m1c = [
   lesson({
     id: 'm1-l22',
     title: 'Kemiska formler',
+    section: 'Formler och reaktioner',
     minutes: 10,
     goal: 'Idag ska vi förstå hur man läser kemiska formler.',
     objectives: ['Läsa vilka atomer och hur många av varje som finns i en formel.', 'Förstå indextal och koefficienter.', 'Skilja på H₂O och 2H₂O.'],
     prerequisites: ['m1-l20', 'm1-l21'],
+    what: [
+      'En **kemisk formel** är ett kort sätt att skriva vilka atomer ett ämne består av och hur många av varje.',
+    ],
+    why: [
+      'Kemister behöver ett gemensamt språk som fungerar i hela världen. "H₂O" betyder samma sak i Sverige och Japan och är mycket kortare än att skriva ut allt.',
+    ],
+    how: [
+      'Bokstäverna är grundämnenas symboler. Den lilla siffran **nere till höger** anger hur många atomer av ämnet som finns. Ingen siffra betyder 1.',
+      'CO₂ = 1 kol + 2 syre. En stor siffra **framför** formeln anger hur många molekyler: 2 H₂O = två vattenmolekyler.',
+    ],
+    where: [
+      'På innehållsförteckningar och förpackningar: NaCl (salt), C₆H₁₂O₆ (glukos), NaHCO₃ (bakpulver).',
+    ],
+    misconceptions: [
+      { myth: 'CO och Co är samma sak.', truth: 'CO är kolmonoxid (kol + syre). Co är grundämnet kobolt. Stor och liten bokstav spelar roll.' },
+    ],
     simple: [
       'En kemisk formel visar vilka atomer ett ämne består av.',
       'Den lilla siffran nere till höger visar hur många av atomen som finns.',
@@ -238,10 +340,27 @@ export const m1c = [
   lesson({
     id: 'm1-l23',
     title: 'Grundläggande kemiska reaktioner',
+    section: 'Formler och reaktioner',
     minutes: 12,
     goal: 'Idag ska vi förstå vad en kemisk reaktion är och hur man skriver den.',
     objectives: ['Förklara att atomer byter partner i en kemisk reaktion, men inte försvinner.', 'Läsa en reaktionsformel med reaktanter och produkter.', 'Balansera en enkel reaktionsformel.'],
     prerequisites: ['m1-l22'],
+    what: [
+      'I en **kemisk reaktion** omvandlas ämnen till nya ämnen. Det du börjar med kallas **reaktanter** och det som bildas kallas **produkter**.',
+    ],
+    why: [
+      'Reaktioner sker när atomerna kan ordna om sig till bindningar med lägre energi (se "Varför reagerar atomer?"). Det behövs ofta en knuff i början – en tändsticka, värme – för att få igång det.',
+    ],
+    how: [
+      'Atomerna försvinner aldrig. De byter bara partner. Därför måste det finnas lika många av varje sorts atom före och efter pilen: 2 H₂ + O₂ → 2 H₂O.',
+      'Att se till att det stämmer kallas att **balansera** reaktionsformeln.',
+    ],
+    where: [
+      'Matlagning, rost, förbränning i bilmotorer, matsmältning och cellandning – allt är kemiska reaktioner.',
+    ],
+    misconceptions: [
+      { myth: 'När något brinner upp försvinner det.', truth: 'Atomerna blir gaser (koldioxid och vatten) som sprids i luften. Massan finns kvar.' },
+    ],
     simple: [
       'I en kemisk reaktion bildas nya ämnen.',
       'Atomerna försvinner inte – de byter bara plats och partner.',

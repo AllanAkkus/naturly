@@ -139,7 +139,7 @@ function TermCard({ term, open, onToggle, onOpenRelated }: { term: GlossaryTerm;
                   ))}
               </div>
             )}
-            <p className="text-xs text-muted">Modul {getModule(term.moduleId)?.number}</p>
+            <p className="text-xs text-muted">Kapitel {getModule(term.moduleId)?.number}</p>
           </div>
         )}
       </Card>

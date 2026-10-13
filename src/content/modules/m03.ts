@@ -12,6 +12,7 @@ export const module3 = defineModule(
       'Grundämnen och föreningar, blandningar, organisk och oorganisk kemi, vatten och lösningar, syror, baser och pH, reaktioner i vardagen, industrins kemikalier och hur ämnen påverkar miljön. Innehåller centralt innehåll om organiska och oorganiska ämnen och om hur ämnen används och påverkar miljön.',
     icon: 'FlaskConical',
     tone: 'pink',
+    part: 'kemi',
     areas: ['natur'],
     status: 'complete',
     core: false,

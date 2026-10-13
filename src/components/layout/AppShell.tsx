@@ -29,20 +29,20 @@ import { cn } from '@/lib/utils'
 
 export const NAV = [
   { to: '/', label: 'Hem', icon: Home, end: true },
-  { to: '/kurs', label: 'Kursen', icon: BookOpen },
+  { to: '/kurs', label: 'Läroboken', icon: BookOpen },
+  { to: '/ordlista', label: 'Ordlista', icon: Library },
   { to: '/repetera', label: 'Repetera', icon: Repeat },
   { to: '/ova', label: 'Öva & prov', icon: ClipboardList },
   { to: '/periodiska-systemet', label: 'Periodiska systemet', icon: Grid3x3 },
   { to: '/atombyggaren', label: 'Atombyggaren', icon: Atom },
   { to: '/labb', label: 'Labbet', icon: FlaskConical },
   { to: '/uppgiftshjalp', label: 'Hjälp med uppgift', icon: Camera },
-  { to: '/ordlista', label: 'Ordlista', icon: Library },
   { to: '/planering', label: 'Planering', icon: CalendarCheck },
   { to: '/framsteg', label: 'Framsteg', icon: TrendingUp },
   { to: '/installningar', label: 'Inställningar', icon: Settings },
 ]
 
-const MOBILE_NAV = ['/', '/kurs', '/repetera', '/planering']
+const MOBILE_NAV = ['/', '/kurs', '/ordlista', '/repetera']
 
 function useApplySettings() {
   const s = useSettings()

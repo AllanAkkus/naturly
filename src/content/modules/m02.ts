@@ -12,6 +12,7 @@ export const module2 = defineModule(
       'Lär dig hitta grundämnen, förstå perioder och grupper, skilja på metaller och ickemetaller, förutsäga jonladdningar och läsa isotopbeteckningar. Stödkunskap för materians uppbyggnad och för organiska och oorganiska ämnen.',
     icon: 'Grid3x3',
     tone: 'blue',
+    part: 'kemi',
     areas: ['natur'],
     status: 'complete',
     core: false,

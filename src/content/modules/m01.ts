@@ -13,6 +13,7 @@ export const module1 = defineModule(
       'Grunden för hela kursen. Du lär dig vad atomer består av, hur man räknar protoner, neutroner och elektroner, vad isotoper och joner är och hur atomer binds ihop. Stödkunskap för det centrala innehållet om materians uppkomst och om organiska och oorganiska ämnen.',
     icon: 'Atom',
     tone: 'lavender',
+    part: 'kemi',
     areas: ['natur'],
     status: 'complete',
     core: false,

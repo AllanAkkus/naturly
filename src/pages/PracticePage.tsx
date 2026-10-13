@@ -94,7 +94,7 @@ function AdaptiveQuiz() {
     <Card className="flex flex-col gap-4 p-5">
       <p className="text-sm">Quizen anpassar sig efter dig: två rätt i rad ger en svårare fråga, ett fel ger en enklare. Begrepp du behöver repetera kommer oftare.</p>
       <div>
-        <p className="mb-2 text-sm font-medium">Vilka moduler?</p>
+        <p className="mb-2 text-sm font-medium">Vilka kapitel?</p>
         <ModulePicker selected={modules} onChange={setModules} />
       </div>
       <div>
@@ -110,7 +110,7 @@ function AdaptiveQuiz() {
       <Button className="self-start" disabled={pool.length === 0} onClick={() => setActive(true)}>
         <Play /> Starta (10 frågor)
       </Button>
-      <p className="text-xs text-muted">{pool.length} frågor finns i de valda modulerna.</p>
+      <p className="text-xs text-muted">{pool.length} frågor finns i de valda kapitlen.</p>
     </Card>
   )
 }
@@ -182,7 +182,7 @@ function ExamSetup() {
       <Card className="flex flex-col gap-4 p-5">
         <p className="text-sm">Ett simulerat prov med blandade frågor från hela kursen. Förklaringarna kommer i slutet, precis som på ett riktigt prov.</p>
         <div>
-          <p className="mb-2 text-sm font-medium">Moduler</p>
+          <p className="mb-2 text-sm font-medium">Kapitel</p>
           <ModulePicker selected={modules} onChange={setModules} />
         </div>
         <div className="flex flex-wrap items-center gap-2">

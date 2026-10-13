@@ -68,7 +68,7 @@ export const SIMULATIONS: Record<SimulationId, SimulationDef> = {
     title: 'Osmos i celler',
     icon: '💧',
     moduleId: 'm5',
-    conceptId: 'm5-l03',
+    conceptId: 'm5-l13',
     goal: 'Förstå hur vatten rör sig in i och ut ur celler genom osmos.',
     instructions: ['Välj röd blodkropp eller växtcell.', 'Dra i reglaget för salthalten utanför cellen.', 'Se vad som händer med cellens storlek.'],
     explanation: [
@@ -210,7 +210,7 @@ SIMULATIONS.ph.questions = qs('ph', 'm3-l07', [
   mcq('Vad bildas när H⁺ och OH⁻ reagerar?', ['Salt', 'Vatten', 'Syre'], 1, 'H⁺ + OH⁻ → H₂O. Det kallas neutralisation.'),
   tf('pH 2 är dubbelt så surt som pH 4.', false, 'pH-skalan är logaritmisk: pH 2 är 10 · 10 = 100 gånger surare än pH 4.', { d: 3 }),
 ] as Draft[])
-SIMULATIONS.osmosis.questions = qs('osmosis', 'm5-l03', [
+SIMULATIONS.osmosis.questions = qs('osmosis', 'm5-l13', [
   mcq('Vad händer med en röd blodkropp i destillerat vatten?', ['Den skrumpnar', 'Den sväller och kan spricka', 'Ingenting'], 1, 'Vatten går in i cellen genom osmos eftersom det finns mer löst ämne inne i cellen.'),
   mcq('Varför spricker inte växtceller i rent vatten?', ['De har cellvägg', 'De har kloroplaster', 'De saknar membran'], 0, 'Cellväggen håller emot trycket.'),
   explain('Förklara varför man inte kan dricka havsvatten när man är törstig.', 'Havsvatten har högre salthalt än kroppens celler. Vatten skulle då lämna cellerna genom osmos, och njurarna måste använda mer vatten för att bli av med saltet. Man blir alltså ännu mer uttorkad.', [['salt', 'salthalt'], ['osmos'], ['lämna', 'ut ur', 'förlorar vatten', 'uttork']], { min: 2, d: 3 }),

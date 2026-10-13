@@ -4,10 +4,27 @@ export const m2b = [
   lesson({
     id: 'm2-l08',
     title: 'Valenselektroner och grupper',
+    section: 'Tabellen som verktyg',
     minutes: 10,
     goal: 'Idag ska vi använda periodiska systemet för att räkna ut valenselektroner och elektronkonfiguration.',
     objectives: ['Läsa av antalet valenselektroner från gruppen.', 'Skriva elektronfördelningen för de 20 första grundämnena.', 'Känna igen en enkel elektronkonfiguration (1s² 2s² …).'],
     prerequisites: ['m2-l04', 'm1-l14'],
+    what: [
+      'För huvudgrupperna (1, 2 och 13–18) kan du läsa antalet **valenselektroner** direkt från gruppnumret.',
+    ],
+    why: [
+      'Tabellen är byggd så att varje steg åt höger lägger till en elektron i det yttersta skalet. Därför hör kolumn och valenselektroner ihop.',
+    ],
+    how: [
+      'Grupp 1 → 1, grupp 2 → 2, grupp 13 → 3, 14 → 4, 15 → 5, 16 → 6, 17 → 7, 18 → 8 (helium har 2).',
+      'Perioden säger på hur många skal elektronerna fördelas.',
+    ],
+    where: [
+      'Detta är genvägen när du snabbt ska förutsäga om ett ämne blir positiv eller negativ jon.',
+    ],
+    misconceptions: [
+      { myth: 'Grupp 13 har 13 valenselektroner.', truth: 'Ta bort tian: grupp 13 har 3, grupp 17 har 7.' },
+    ],
     simple: [
       'För huvudgrupperna kan du läsa valenselektronerna direkt ur gruppen.',
       'Grupp 1 → 1, grupp 2 → 2, grupp 13 → 3 … grupp 17 → 7, grupp 18 → 8.',
@@ -43,10 +60,26 @@ export const m2b = [
   lesson({
     id: 'm2-l09',
     title: 'Vanliga jonladdningar',
+    section: 'Tabellen som verktyg',
     minutes: 10,
     goal: 'Idag ska vi lära oss förutsäga vilken jon ett grundämne bildar med hjälp av periodiska systemet.',
     objectives: ['Förutsäga jonladdningen för grupp 1, 2, 13, 15, 16 och 17.', 'Förklara varför jonen får den laddningen.', 'Känna till att övergångsmetaller kan bilda flera olika joner.'],
     prerequisites: ['m2-l08', 'm1-l18', 'm1-l19'],
+    what: [
+      'Grundämnen i samma grupp bildar ofta joner med **samma laddning**. Det kan du läsa av i tabellen.',
+    ],
+    why: [
+      'Atomen avger eller tar upp det antal elektroner som krävs för ädelgasstruktur. Grupp 1 har 1 att bli av med → +1. Grupp 17 saknar 1 → −1.',
+    ],
+    how: [
+      'Grupp 1: +1, grupp 2: +2, grupp 13: +3. Grupp 15: −3, grupp 16: −2, grupp 17: −1. Grupp 14 och 18 bildar normalt inga enkla joner.',
+    ],
+    where: [
+      'Detta hjälper dig att skriva formler för salter: Ca²⁺ och Cl⁻ blir CaCl₂ eftersom det behövs två minus för att ta ut två plus.',
+    ],
+    misconceptions: [
+      { myth: 'Grupp 16 bildar +6-joner.', truth: 'Det är mycket lättare att ta upp 2 elektroner än att avge 6, så det blir −2.' },
+    ],
     simple: [
       'Grupp 1 bildar +1-joner, grupp 2 +2-joner och grupp 13 +3-joner.',
       'Grupp 17 bildar −1-joner, grupp 16 −2-joner och grupp 15 −3-joner.',
@@ -89,10 +122,27 @@ export const m2b = [
   lesson({
     id: 'm2-l10',
     title: 'Läsa isotopbeteckningar',
+    section: 'Tabellen som verktyg',
     minutes: 10,
     goal: 'Idag ska vi lära oss läsa och skriva isotopbeteckningar som $^{9}_{4}\\mathrm{Be}$.',
     objectives: ['Läsa av masstal, atomnummer och symbol i en isotopbeteckning.', 'Räkna ut protoner, neutroner och elektroner ur beteckningen.', 'Skriva beteckningen för en isotop när partiklarna är kända.'],
     prerequisites: ['m1-l10', 'm1-l11'],
+    what: [
+      'En **isotopbeteckning** skriver ut en isotop med symbolen och två tal: **masstalet** uppe till vänster och **atomnumret** nere till vänster, t.ex. ¹⁴₆C.',
+    ],
+    why: [
+      'Eftersom ett grundämne kan ha flera isotoper behöver vi ett sätt att visa exakt vilken atom vi menar.',
+    ],
+    how: [
+      'Uppe = protoner + neutroner. Nere = protoner. Neutroner = uppe − nere. ¹⁴₆C: 14 − 6 = 8 neutroner.',
+      'Atomnumret skrivs ofta inte ut, eftersom symbolen redan avslöjar det.',
+    ],
+    where: [
+      'I texter om radioaktivitet, medicin och åldersbestämning, t.ex. ¹³¹I (jod-131) och ²³⁵U (uran-235).',
+    ],
+    misconceptions: [
+      { myth: 'Talet uppe är antalet neutroner.', truth: 'Talet uppe är masstalet – protoner och neutroner tillsammans.' },
+    ],
     simple: [
       'En isotopbeteckning visar symbolen med två siffror.',
       'Uppe till vänster står masstalet (protoner + neutroner).',
@@ -128,10 +178,26 @@ export const m2b = [
   lesson({
     id: 'm2-l11',
     title: 'Identifiera grundämnen från protoner',
+    section: 'Tabellen som verktyg',
     minutes: 9,
     goal: 'Idag ska vi öva på att avgöra vilket grundämne det är när vi vet antalet partiklar.',
     objectives: ['Identifiera ett grundämne från antalet protoner.', 'Identifiera grundämnet hos en jon från elektroner och laddning.', 'Undvika vanliga fällor, som att använda masstalet som atomnummer.'],
     prerequisites: ['m2-l10'],
+    what: [
+      'Vilket grundämne en atom är avgörs **enbart av antalet protoner**.',
+    ],
+    why: [
+      'Neutroner kan variera (isotoper) och elektroner kan flyttas (joner), men protonerna är låsta så länge det inte sker en kärnreaktion. De är därför det säkra kännetecknet.',
+    ],
+    how: [
+      'Räkna protonerna → leta upp samma atomnummer i tabellen → läs symbolen. 17 protoner = klor, oavsett antal neutroner eller elektroner.',
+    ],
+    where: [
+      'När du får en bild av en atom eller jon på prov: titta bara på protonerna för att avgöra ämnet.',
+    ],
+    misconceptions: [
+      { myth: 'En atom med 18 elektroner är argon.', truth: 'Den kan vara Cl⁻ (17 protoner) eller K⁺ (19 protoner). Räkna protonerna.' },
+    ],
     simple: [
       'Det är bara antalet protoner som avgör vilket grundämne det är.',
       'Räkna protonerna och leta upp samma atomnummer i periodiska systemet.',
@@ -168,10 +234,26 @@ export const m2b = [
   lesson({
     id: 'm2-l12',
     title: 'Interaktiva övningar: läsa periodiska systemet',
+    section: 'Tabellen som verktyg',
     minutes: 15,
     goal: 'Idag ska vi använda allt vi lärt oss om periodiska systemet i blandade övningar.',
     objectives: ['Kombinera period, grupp, valenselektroner och jonladdning.', 'Använda periodiska systemet för att resonera om okända ämnen.', 'Träna inför repetitionsprovet.'],
     prerequisites: ['m2-l08', 'm2-l09', 'm2-l10', 'm2-l11'],
+    what: [
+      'Den här sidan samlar allt du lärt dig om periodiska systemet och låter dig öva på att läsa det som en karta.',
+    ],
+    why: [
+      'Kunskapen fastnar när du använder den. Varje position i tabellen berättar flera saker samtidigt – det blir lätt när du har gjort det några gånger.',
+    ],
+    how: [
+      'För varje ämne: 1) atomnummer = protoner, 2) period = antal skal, 3) grupp = valenselektroner (huvudgrupper), 4) grupp → trolig jonladdning.',
+    ],
+    where: [
+      'Precis den här sortens frågor brukar komma på prov om periodiska systemet.',
+    ],
+    misconceptions: [
+      { myth: 'Det är fusk att titta i tabellen.', truth: 'Tabellen är ett verktyg. Att kunna använda den är det som räknas.' },
+    ],
     simple: [
       'Nu tränar vi på att läsa periodiska systemet som en karta.',
       'Varje position berättar: antal protoner, antal skal, antal valenselektroner och ofta vilken jon som bildas.',

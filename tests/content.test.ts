@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { ALL_LESSONS, MODULES, QUESTION_BANK, getLesson, lessonQuestions } from '@/content'
+import { ALL_LESSONS, MODULES, QUESTION_BANK, getLesson, lessonQuestions, moduleSections } from '@/content'
+import { BOOK_PART_BY_ID } from '@/content/book'
 import { CURRICULUM_BY_ID, CURRICULUM } from '@/content/curriculum'
 import type { Question } from '@/content/types'
 import { TERM_BY_ID, GLOSSARY } from '@/data/glossary'
@@ -59,6 +60,9 @@ describe('kursinnehållet', () => {
 
   it('varje modul har lektioner och avslutas med ett prov', () => {
     for (const m of MODULES) {
+      const titles = moduleSections(m).map((s) => s.title)
+      expect(new Set(titles).size, `${m.id} avsnitten ligger i följd`).toBe(titles.length)
+      expect(BOOK_PART_BY_ID.has(m.part), `${m.id} del`).toBe(true)
       expect(m.lessons.length, m.id).toBeGreaterThan(3)
       expect(m.lessons.at(-1)!.kind, `${m.id} slutar med prov`).toBe('test')
     }
@@ -72,6 +76,13 @@ describe('kursinnehållet', () => {
         expect(l.questions.length).toBeGreaterThanOrEqual(10)
       } else {
         expect(l.goal.startsWith('Idag ska vi'), `${l.id} mål`).toBe(true)
+        // Lärobokssidan: vad, varför, hur, var och vanliga missförstånd
+        expect(l.section, `${l.id} avsnitt`).toBeTruthy()
+        for (const key of ['what', 'why', 'how', 'where'] as const) {
+          expect(l[key].length, `${l.id} ${key}`).toBeGreaterThanOrEqual(1)
+          for (const p of l[key]) expect(p.length, `${l.id} ${key} för kort`).toBeGreaterThan(20)
+        }
+        expect(l.misconceptions.length, `${l.id} missförstånd`).toBeGreaterThanOrEqual(1)
         expect(l.objectives.length).toBeGreaterThanOrEqual(2)
         expect(l.simple.length, `${l.id} enkel förklaring 2–4 meningar`).toBeGreaterThanOrEqual(2)
         expect(l.simple.length).toBeLessThanOrEqual(4)
@@ -91,8 +102,8 @@ describe('kursinnehållet', () => {
     })
   }
 
-  it('alla simuleringar pekar på riktiga lektioner och har följdfrågor', () => {
-    for (const s of SIMULATION_LIST) {
+  it('simuleringar i skrivna kapitel pekar på riktiga lektioner och har följdfrågor', () => {
+    for (const s of SIMULATION_LIST.filter((s) => MODULES.some((m) => m.id === s.moduleId))) {
       expect(getLesson(s.conceptId), s.id).toBeDefined()
       expect(s.questions.length, s.id).toBeGreaterThanOrEqual(2)
       for (const q of s.questions) checkQuestion(q)
@@ -104,15 +115,15 @@ describe('kursinnehållet', () => {
     for (const t of GLOSSARY) {
       expect(MODULES.some((m) => m.id === t.moduleId) || ['m4', 'm5', 'm6', 'm7', 'm8', 'm9', 'm10', 'm11', 'm12', 'm13', 'm14'].includes(t.moduleId), t.id).toBe(true)
       expect(t.analogy.length, `${t.id} vardagsliknelse`).toBeGreaterThan(5)
+      for (const r of t.related) expect(TERM_BY_ID.has(r), `${t.id} länkar till okänt begrepp "${r}"`).toBe(true)
     }
   })
 })
 
 describe('täckning av centralt innehåll', () => {
-  it('alla moduler som är markerade som klara täcker sina läroplanspunkter', () => {
+  it('läroboken täcker allt centralt innehåll', () => {
     const covered = new Set(ALL_LESSONS.flatMap((l) => l.curriculum))
-    const complete = MODULES.every((m) => m.status === 'complete') && MODULES.length === 14
-    if (complete) for (const c of CURRICULUM) expect(covered.has(c.id), `läroplanspunkt saknas: ${c.text}`).toBe(true)
-    else expect(covered.size).toBeGreaterThan(0)
+    expect(MODULES.every((m) => m.status === 'complete')).toBe(true)
+    for (const c of CURRICULUM) expect(covered.has(c.id), `läroplanspunkt saknas: ${c.text}`).toBe(true)
   })
 })

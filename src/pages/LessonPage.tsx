@@ -4,13 +4,15 @@ import { ArrowLeft, HeartHandshake } from 'lucide-react'
 import { getLesson, getModule } from '@/content'
 import type { TestLesson } from '@/content/types'
 import { LessonPlayer } from '@/components/lesson/LessonPlayer'
+import { TextbookPage } from '@/components/lesson/TextbookPage'
 import { QuizRunner } from '@/components/quiz/QuizRunner'
 import { useProgress } from '@/store/progress'
 import { useLearningContext } from '@/store/context'
 import { Card } from '@/components/ui/card'
 import NotFound from './NotFound'
 
-export default function LessonPage() {
+/** /lektion/:id visar lärobokssidan, /lektion/:id/steg den stegvisa träningen. */
+export default function LessonPage({ mode = 'book' }: { mode?: 'book' | 'steps' }) {
   const { lessonId } = useParams()
   const [params] = useSearchParams()
   const lesson = getLesson(lessonId ?? '')
@@ -23,7 +25,13 @@ export default function LessonPage() {
           <p className="text-lg font-medium">Ingen fara. Vi börjar från början. 💜</p>
         </div>
       )}
-      {lesson.kind === 'lesson' ? <LessonPlayer key={lesson.id} lesson={lesson} /> : <TestView key={lesson.id} test={lesson} />}
+      {lesson.kind === 'test' ? (
+        <TestView key={lesson.id} test={lesson} />
+      ) : mode === 'steps' ? (
+        <LessonPlayer key={lesson.id} lesson={lesson} />
+      ) : (
+        <TextbookPage key={lesson.id} lesson={lesson} />
+      )}
     </>
   )
 }
@@ -44,7 +52,7 @@ function TestView({ test }: { test: TestLesson }) {
   return (
     <div className="mx-auto flex max-w-3xl flex-col gap-5">
       <Link to={`/modul/${module.id}`} className="inline-flex items-center gap-1 text-sm text-muted hover:text-foreground">
-        <ArrowLeft className="size-4" /> Modul {module.number}: {module.title}
+        <ArrowLeft className="size-4" /> Kapitel {module.number}: {module.title}
       </Link>
       <header>
         <h1 className="text-3xl font-semibold">{test.title}</h1>

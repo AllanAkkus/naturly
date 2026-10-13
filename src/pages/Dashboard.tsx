@@ -156,7 +156,7 @@ export function Dashboard() {
                 <CardHeader>
                   <CardDescription>Nuvarande kapitel</CardDescription>
                   <CardTitle>
-                    Modul {currentModule.number}: {currentModule.title}
+                    Kapitel {currentModule.number}: {currentModule.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>

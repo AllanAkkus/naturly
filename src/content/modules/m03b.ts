@@ -4,10 +4,27 @@ export const m3b = [
   lesson({
     id: 'm3-l07',
     title: 'pH',
+    section: 'Vatten, syror och baser',
     minutes: 10,
     goal: 'Idag ska vi förstå vad pH betyder och hur pH-skalan fungerar.',
     objectives: ['Förklara att pH visar hur surt eller basiskt något är.', 'Placera vardagsämnen på pH-skalan.', 'Förklara att ett steg på skalan är en tiofaldig skillnad.'],
     prerequisites: ['m3-l06'],
+    what: [
+      '**pH** är ett mått på hur sur eller basisk en lösning är. Skalan går ungefär från 0 till 14.',
+    ],
+    why: [
+      'Vi behöver ett enkelt tal för att jämföra hur sura saker är. Det spelar stor roll – kroppens enzymer, fiskar i sjöar och växter tål bara vissa pH-värden.',
+    ],
+    how: [
+      'pH 7 = neutralt. Under 7 = surt. Över 7 = basiskt. Ju lägre, desto surare.',
+      'Varje steg är tio gånger: pH 3 är tio gånger surare än pH 4 och hundra gånger surare än pH 5.',
+    ],
+    where: [
+      'Magsaft pH ≈ 2, cola ≈ 2,5, kaffe ≈ 5, rent vatten 7, blod ≈ 7,4, tvål ≈ 10.',
+    ],
+    misconceptions: [
+      { myth: 'pH 4 är dubbelt så surt som pH 8.', truth: 'Skalan är logaritmisk. pH 4 är 10 000 gånger surare än pH 8.' },
+    ],
     core: true,
     curriculum: ['org-oorg', 'amnen-miljo'],
     simple: [
@@ -45,10 +62,26 @@ export const m3b = [
   lesson({
     id: 'm3-l08',
     title: 'Kemiska reaktioner i vardagen',
+    section: 'Kemi i samhället',
     minutes: 11,
     goal: 'Idag ska vi känna igen vanliga kemiska reaktioner och vad som påverkar hur snabbt de går.',
     objectives: ['Beskriva förbränning, oxidation (rost) och fotosyntes som reaktioner.', 'Skilja på exoterma och endoterma reaktioner.', 'Förklara vad som påverkar reaktionshastigheten och vad en katalysator gör.'],
     prerequisites: ['m1-l23'],
+    what: [
+      'Kemiska reaktioner händer runt omkring oss hela tiden. Vissa avger värme (**exoterma**) och vissa tar upp värme (**endoterma**).',
+    ],
+    why: [
+      'Om de nya bindningarna har lägre energi än de gamla blir det energi över – den avges som värme (exoterm). Om de nya har högre energi måste energi tillföras (endoterm).',
+    ],
+    how: [
+      'Reaktioner går snabbare när det är varmare (partiklarna krockar oftare och hårdare), när ämnena är finfördelade (större yta) och när det finns en **katalysator** (något som hjälper till utan att förbrukas).',
+    ],
+    where: [
+      'Förbränning, rost, matlagning och jäsning. Kylpåsar i första hjälpen-lådan använder en endoterm reaktion.',
+    ],
+    misconceptions: [
+      { myth: 'Det måste bli varmt för att det ska vara en kemisk reaktion.', truth: 'Endoterma reaktioner tar upp värme och blir kalla. Tecknet på en reaktion är att nya ämnen bildas.' },
+    ],
     simple: [
       'Kemiska reaktioner händer runt omkring oss hela tiden: när ved brinner, järn rostar och bröd bakas.',
       'Vissa reaktioner avger värme (exoterma), andra tar upp värme (endoterma).',
@@ -93,10 +126,27 @@ export const m3b = [
   lesson({
     id: 'm3-l09',
     title: 'Kemiska ämnen i industrin',
+    section: 'Kemi i samhället',
     minutes: 11,
     goal: 'Idag ska vi se hur några viktiga ämnen tillverkas och används i industrin.',
     objectives: ['Ge exempel på viktiga industrikemikalier.', 'Beskriva hur ammoniak och konstgödsel tillverkas (Haber–Bosch-metoden).', 'Beskriva hur järn framställs ur malm och hur plast tillverkas av olja.'],
     prerequisites: ['m3-l08'],
+    what: [
+      'Den **kemiska industrin** gör om råvaror från naturen till produkter: stål, plast, gödsel, läkemedel, bränslen.',
+    ],
+    why: [
+      'Råvarorna i naturen är sällan användbara direkt. Järnmalm måste bli järn, luftens kväve måste bli gödsel och råolja måste delas upp.',
+    ],
+    how: [
+      'Exempel: i Haber–Bosch-metoden reagerar kväve från luften med väte till ammoniak (NH₃), som blir konstgödsel. Ungefär hälften av världens mat är beroende av det.',
+      'Många processer kräver mycket energi och kan ge utsläpp. Därför arbetar industrin med att hitta renare metoder, t.ex. stål med vätgas i stället för kol.',
+    ],
+    where: [
+      'Allt från tandkräm och kläder till mobiltelefoner har gått genom kemisk industri.',
+    ],
+    misconceptions: [
+      { myth: 'Kemikalier är alltid onaturliga och farliga.', truth: 'Allt är kemikalier, även vatten. Det viktiga är vilket ämne, hur mycket och hur det används.' },
+    ],
     core: true,
     curriculum: ['org-oorg', 'amnen-miljo'],
     simple: [
@@ -144,10 +194,26 @@ export const m3b = [
   lesson({
     id: 'm3-l10',
     title: 'Kemikalier och miljöpåverkan',
+    section: 'Kemi i samhället',
     minutes: 11,
     goal: 'Idag ska vi lära oss hur kemikalier kan påverka miljön och hur man hanterar dem säkert.',
     objectives: ['Känna igen faropiktogram.', 'Förklara vad miljögifter och biologisk anrikning är.', 'Ge exempel på hur kemikalier i vardagen påverkar miljön.'],
     prerequisites: ['m3-l09'],
+    what: [
+      'Vissa kemikalier kan skada människor, djur och miljö. **Miljögifter** är ämnen som är giftiga, bryts ned långsamt och samlas i levande organismer.',
+    ],
+    why: [
+      'Om ett ämne inte bryts ned och lagras i fett ökar halten för varje steg i näringskedjan. Det kallas **biomagnifikation** – rovdjur högst upp får mest.',
+    ],
+    how: [
+      'Faropiktogram (röda romber med svart symbol) varnar för t.ex. frätande, brandfarliga eller miljöfarliga ämnen. EU:s regler (REACH) kräver att företag visar att deras kemikalier är säkra.',
+    ],
+    where: [
+      'DDT drabbade havsörnar i Östersjön på 1900-talet. I dag diskuteras PFAS ("evighetskemikalier") i dricksvatten och stekpannor.',
+    ],
+    misconceptions: [
+      { myth: 'Ett ämne som finns i naturen kan inte vara giftigt.', truth: 'Många naturliga ämnen är mycket giftiga – t.ex. kvicksilver, arsenik och svampgifter. Dosen avgör.' },
+    ],
     core: true,
     curriculum: ['amnen-miljo'],
     simple: [
@@ -196,10 +262,28 @@ export const m3b = [
   lesson({
     id: 'm3-l11',
     title: 'Enkla kemiska beräkningar',
+    section: 'Kemi i samhället',
     minutes: 14,
     goal: 'Idag ska vi lära oss räkna med substansmängd, molmassa och koncentration.',
     objectives: ['Förklara vad 1 mol är.', 'Räkna ut molmassa från periodiska systemet.', 'Använda formlerna n = m/M och c = n/V.'],
     prerequisites: ['m1-l12', 'm1-l22'],
+    what: [
+      '**Substansmängd** mäts i **mol**. 1 mol är 6,022 · 10²³ stycken partiklar – ett "paket" av atomer, som ett dussin men mycket större.',
+      '**Molmassan** (M) är vad 1 mol av ämnet väger i gram.',
+    ],
+    why: [
+      'Atomer är för små för att räkna en och en. Med mol kan vi räkna atomer genom att väga. Det behövs för att veta hur mycket av varje ämne som behövs i en reaktion.',
+    ],
+    how: [
+      'n = m / M (mol = massa ÷ molmassa). Molmassan läser du från atommassan i periodiska systemet: kol 12,0 g/mol.',
+      'Koncentration: c = n / V (mol per liter).',
+    ],
+    where: [
+      'Läkemedelsdoser, bakrecept i stor skala och provsvar från sjukhus (t.ex. blodsocker i mmol/l) bygger på mol.',
+    ],
+    misconceptions: [
+      { myth: '1 mol av allt väger lika mycket.', truth: '1 mol innehåller lika många partiklar, men olika ämnen väger olika mycket per mol.' },
+    ],
     simple: [
       'Atomer är så små att man räknar dem i "paket" som kallas mol. 1 mol är 6,022 · 10²³ stycken.',
       'Molmassan (M) är hur mycket en mol väger i gram. Den står som atommassa i periodiska systemet.',

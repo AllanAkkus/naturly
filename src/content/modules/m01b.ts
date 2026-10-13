@@ -4,10 +4,28 @@ export const m1b = [
   lesson({
     id: 'm1-l09',
     title: 'Atomnummer',
+    section: 'Räkna med atomer',
     minutes: 8,
     goal: 'Idag ska vi förstå vad atomnumret är och hur man använder det.',
     objectives: ['Förklara att atomnumret är antalet protoner.', 'Hitta atomnumret i periodiska systemet.', 'Använda atomnumret för att ta reda på antalet elektroner i en neutral atom.'],
     prerequisites: ['m1-l04', 'm1-l08'],
+    what: [
+      '**Atomnumret** är antalet protoner i en atoms kärna. Det skrivs ibland med bokstaven Z.',
+      'Varje grundämne har sitt eget atomnummer: väte 1, helium 2, kol 6, syre 8.',
+    ],
+    why: [
+      'Eftersom antalet protoner avgör vilket grundämne det är, behöver vi ett enkelt sätt att ange det. Atomnumret är grundämnets "personnummer".',
+    ],
+    how: [
+      'Atomnumret står i varje ruta i periodiska systemet. Ämnena står i ordning från 1 och uppåt.',
+      'I en neutral atom är antalet elektroner lika med atomnumret. Kol har atomnummer 6 → 6 protoner och, om atomen är neutral, 6 elektroner.',
+    ],
+    where: [
+      'När du letar i periodiska systemet efter "ämnet med 20 protoner" hittar du kalcium – samma kalcium som finns i dina ben och i mjölk.',
+    ],
+    misconceptions: [
+      { myth: 'Atomnumret är hur mycket atomen väger.', truth: 'Atomnumret räknar bara protoner. Vikten beror också på neutronerna – det är masstalet och atommassan.' },
+    ],
     simple: [
       'Atomnumret är antalet protoner i atomens kärna.',
       'Varje grundämne har ett eget atomnummer. Väte har 1, helium 2, litium 3 och så vidare.',
@@ -43,10 +61,28 @@ export const m1b = [
   lesson({
     id: 'm1-l10',
     title: 'Masstal',
+    section: 'Räkna med atomer',
     minutes: 10,
     goal: 'Idag ska vi förstå vad masstalet är och hur man räknar ut det.',
     objectives: ['Förklara att masstalet är antalet protoner plus neutroner.', 'Räkna ut masstal, protoner eller neutroner när två av dem är kända.', 'Läsa en isotopbeteckning som ⁹Be.'],
     prerequisites: ['m1-l09', 'm1-l05'],
+    what: [
+      '**Masstalet** är antalet protoner plus antalet neutroner i en atomkärna. Det skrivs ibland med bokstaven A.',
+    ],
+    why: [
+      'Vi behöver masstalet för att skilja olika tunga atomer av samma grundämne åt. Protonerna säger vilket ämne det är, men först med neutronerna vet vi hur tung just den atomen är.',
+      'Elektronerna räknas inte, eftersom de väger så lite att de knappt märks.',
+    ],
+    how: [
+      'Masstal = protoner + neutroner. En kärna med 4 protoner och 5 neutroner har masstalet 9.',
+      'Vänder du på det kan du räkna ut neutronerna: **neutroner = masstal − atomnummer**. Kol-14: 14 − 6 = 8 neutroner.',
+    ],
+    where: [
+      'Namn som "kol-14" och "uran-235" anger masstalet. Siffran efter namnet är alltså antalet nukleoner.',
+    ],
+    misconceptions: [
+      { myth: 'Masstalet och atomnumret är samma sak.', truth: 'Atomnumret räknar bara protoner. Masstalet räknar protoner och neutroner tillsammans.' },
+    ],
     simple: [
       'Masstalet är antalet protoner plus antalet neutroner.',
       'Elektronerna räknas inte, eftersom de väger nästan ingenting.',
@@ -103,10 +139,30 @@ export const m1b = [
   lesson({
     id: 'm1-l11',
     title: 'Isotoper',
+    section: 'Räkna med atomer',
     minutes: 10,
     goal: 'Idag ska vi förstå vad isotoper är.',
     objectives: ['Förklara att isotoper är atomer av samma grundämne med olika antal neutroner.', 'Skriva och läsa isotopbeteckningar.', 'Ge exempel på hur isotoper används.'],
     prerequisites: ['m1-l10'],
+    what: [
+      '**Isotoper** är atomer av samma grundämne som har olika antal neutroner. De har alltså samma atomnummer men olika masstal.',
+    ],
+    why: [
+      'Isotoper finns för att en kärna kan hålla ihop med lite olika antal neutroner. Antalet protoner är låst för ett visst grundämne, men neutronerna kan variera.',
+      'Vissa kombinationer är stabila, andra inte. De instabila isotoperna faller sönder med tiden – de är **radioaktiva**.',
+    ],
+    how: [
+      'Kol-12 har 6 protoner och 6 neutroner. Kol-14 har 6 protoner och 8 neutroner. Båda är kol och reagerar kemiskt nästan likadant, eftersom de har lika många elektroner.',
+      'Radioaktiva isotoper sönderfaller i en jämn takt. Den tid det tar tills hälften har sönderfallit kallas **halveringstid**.',
+    ],
+    where: [
+      'Arkeologer åldersbestämmer ben och trä med kol-14 (halveringstid 5 730 år).',
+      'På sjukhus används radioaktiva isotoper för att undersöka organ och behandla cancer.',
+    ],
+    misconceptions: [
+      { myth: 'Isotoper är olika grundämnen.', truth: 'Isotoper är samma grundämne – samma antal protoner. Bara neutronerna skiljer.' },
+      { myth: 'Alla isotoper är radioaktiva.', truth: 'De flesta grundämnen har stabila isotoper. Kol-12 och kol-13 är till exempel stabila.' },
+    ],
     simple: [
       'Isotoper är atomer av samma grundämne som har olika antal neutroner.',
       'De har samma antal protoner, men olika masstal.',
@@ -153,10 +209,26 @@ export const m1b = [
   lesson({
     id: 'm1-l12',
     title: 'Atommassa – inte samma sak som masstal',
+    section: 'Räkna med atomer',
     minutes: 9,
     goal: 'Idag ska vi förstå varför atommassan i periodiska systemet har decimaler.',
     objectives: ['Skilja på masstal och atommassa.', 'Förklara att atommassan är ett vägt medelvärde av ett grundämnes isotoper.', 'Känna till enheten u (atommassenhet).'],
     prerequisites: ['m1-l11'],
+    what: [
+      '**Atommassan** är medelvikten för ett grundämnes atomer så som de finns i naturen. Den anges i enheten u och står i periodiska systemet.',
+    ],
+    why: [
+      'Eftersom de flesta grundämnen är en blandning av isotoper väger inte alla atomer lika mycket. När vi räknar med verkliga ämnen behöver vi medelvärdet, inte vikten av en enda isotop.',
+    ],
+    how: [
+      'Klor finns som cirka 76 % klor-35 och 24 % klor-37. Medelvärdet blir ungefär 35,45 u. Därför har atommassan decimaler, medan masstalet alltid är ett heltal.',
+    ],
+    where: [
+      'När man räknar ut hur mycket ett ämne väger per mol (kemiska beräkningar, kapitel 3) använder man atommassan från periodiska systemet.',
+    ],
+    misconceptions: [
+      { myth: 'Atommassan avrundad är alltid masstalet.', truth: 'Masstalet gäller en viss isotop. Atommassan är ett medelvärde av alla isotoper och kan hamna mitt emellan.' },
+    ],
     simple: [
       'Masstalet gäller en enda isotop och är alltid ett heltal.',
       'Atommassan i periodiska systemet är ett medelvärde av alla isotoper i naturen.',
@@ -206,10 +278,29 @@ export const m1b = [
   lesson({
     id: 'm1-l13',
     title: 'Elektronskal',
+    section: 'Elektronerna bestämmer',
     minutes: 10,
     goal: 'Idag ska vi förstå hur elektronerna är ordnade i skal.',
     objectives: ['Förklara att elektronerna i skalmodellen finns i skal runt kärnan.', 'Fördela elektronerna i skal för de 20 första grundämnena.', 'Veta att K-skalet rymmer 2 och L-skalet 8 elektroner.'],
     prerequisites: ['m1-l06', 'm1-l09'],
+    what: [
+      'I **skalmodellen** ligger elektronerna i **skal** – lager på olika avstånd från kärnan. Skalen heter K, L, M och så vidare inifrån och ut.',
+      'K-skalet rymmer högst 2 elektroner, L-skalet högst 8. Det tredje skalet (M) har ofta 8 som en stabil nivå för de första grundämnena.',
+    ],
+    why: [
+      'Elektroner nära kärnan dras hårdare mot den och har lägre energi. Det är "billigast" i energi att ligga nära kärnan, så de inre skalen fylls först.',
+      'Varje skal har bara plats för ett visst antal elektroner. När ett skal är fullt måste nästa elektron ta plats längre ut.',
+    ],
+    how: [
+      'Fyll skalen inifrån och ut. Natrium har 11 elektroner: 2 i K, 8 i L och 1 i M. Det skrivs **2, 8, 1**.',
+      'Antalet skal motsvarar vilken rad (period) ämnet står på i periodiska systemet.',
+    ],
+    where: [
+      'Fyrverkeriers färger kommer från elektroner som hoppar mellan skal och sänder ut ljus av en viss färg.',
+    ],
+    misconceptions: [
+      { myth: 'Skalen är fysiska skal eller banor.', truth: 'Skalen är energinivåer. Modellen är en förenkling som fungerar bra för att förstå kemi på den här nivån.' },
+    ],
     simple: [
       'I skalmodellen ligger elektronerna i skal, som lager runt kärnan.',
       'Det innersta skalet (K) rymmer högst 2 elektroner. Nästa skal (L) rymmer högst 8.',
@@ -248,10 +339,27 @@ export const m1b = [
   lesson({
     id: 'm1-l14',
     title: 'Valenselektroner',
+    section: 'Elektronerna bestämmer',
     minutes: 10,
     goal: 'Idag ska vi förstå vad valenselektroner är.',
     objectives: ['Förklara att valenselektroner är elektronerna i det yttersta skalet.', 'Räkna ut antalet valenselektroner för huvudgruppsämnen.', 'Koppla valenselektroner till grupperna i periodiska systemet.'],
     prerequisites: ['m1-l13'],
+    what: [
+      '**Valenselektroner** är elektronerna i atomens yttersta skal.',
+    ],
+    why: [
+      'När atomer möts är det de yttersta elektronerna som kommer i kontakt med andra atomer. De inre elektronerna ligger skyddade närmare kärnan. Därför är det bara valenselektronerna som deltar i kemiska reaktioner.',
+    ],
+    how: [
+      'Skriv elektronfördelningen och titta på sista siffran. Svavel: 2, 8, 6 → 6 valenselektroner.',
+      'För huvudgrupperna i periodiska systemet kan du läsa av antalet direkt: grupp 1 har 1, grupp 2 har 2, grupp 13 har 3 … grupp 17 har 7.',
+    ],
+    where: [
+      'Att natrium och kalium beter sig likadant (båda reagerar häftigt med vatten) beror på att båda har 1 valenselektron.',
+    ],
+    misconceptions: [
+      { myth: 'Alla elektroner i atomen deltar i reaktioner.', truth: 'Bara de yttersta – valenselektronerna – gör det i vanlig kemi.' },
+    ],
     simple: [
       'Valenselektroner är elektronerna i atomens yttersta skal.',
       'Det är valenselektronerna som deltar när atomer reagerar.',
@@ -290,10 +398,28 @@ export const m1b = [
   lesson({
     id: 'm1-l15',
     title: 'Vad är ädelgasstruktur?',
+    section: 'Elektronerna bestämmer',
     minutes: 10,
     goal: 'Idag ska vi förstå vad ädelgasstruktur är.',
     objectives: ['Förklara att ädelgaserna har fullt yttersta skal.', 'Förklara vad ädelgasstruktur och oktettregeln innebär.', 'Känna till att oktettregeln har undantag.'],
     prerequisites: ['m1-l14'],
+    what: [
+      '**Ädelgaserna** (helium, neon, argon m.fl.) har ett fullt yttersta skal. En atom eller jon som har samma elektronuppställning som en ädelgas sägs ha **ädelgasstruktur**.',
+    ],
+    why: [
+      'Ett fullt yttersta skal är ett mycket stabilt läge med låg energi. Ädelgaserna har inget att vinna på att ta upp, ge bort eller dela elektroner – därför reagerar de nästan aldrig.',
+      'Andra atomer "strävar" inte medvetet, men reaktioner som leder till ädelgasstruktur frigör ofta energi och sker därför gärna.',
+    ],
+    how: [
+      'Neon har 2, 8 – fullt. Natrium har 2, 8, 1. Om natrium blir av med sin enda yttre elektron får den 2, 8 – samma som neon.',
+      'Tumregeln att atomer gärna får 8 elektroner ytterst kallas **oktettregeln**. Väte och helium nöjer sig med 2.',
+    ],
+    where: [
+      'Neonskyltar och argon i glödlampor används just för att gaserna inte reagerar med något.',
+    ],
+    misconceptions: [
+      { myth: 'Atomer vill ha 8 elektroner.', truth: 'Atomer vill ingenting. Det är bara så att lägen med fullt skal har lägre energi och därför är stabilare.' },
+    ],
     simple: [
       'Ädelgaserna i grupp 18 har ett fullt yttersta skal.',
       'De reagerar nästan aldrig med andra ämnen.',
@@ -332,10 +458,28 @@ export const m1b = [
   lesson({
     id: 'm1-l16',
     title: 'Varför reagerar atomer?',
+    section: 'Elektronerna bestämmer',
     minutes: 10,
     goal: 'Idag ska vi förstå varför atomer reagerar med varandra.',
     objectives: ['Förklara att kemiska reaktioner sker när de leder till ett energimässigt gynnsammare läge.', 'Beskriva att atomer kan avge, ta upp eller dela elektroner.', 'Förklara varför "atomer vill ha 8" är ett förenklat sätt att prata.'],
     prerequisites: ['m1-l15'],
+    what: [
+      'En **kemisk reaktion** är när atomer byter partner och nya ämnen bildas. Den här sidan handlar om **varför** det händer.',
+    ],
+    why: [
+      'Allt i naturen tenderar att gå mot lägen med **lägre energi**, som en boll som rullar nedför en backe. Atomer som binder till varandra hamnar ofta i ett sådant lägre energiläge.',
+      'Skillnaden i energi frigörs, ofta som värme eller ljus. Därför blir det varmt när något brinner.',
+    ],
+    how: [
+      'Det finns två huvudsätt: elektroner kan **flyttas** från en atom till en annan (då bildas joner), eller atomer kan **dela** elektroner (då bildas molekyler).',
+      'Ofta leder det till att atomerna får fulla yttersta skal – ädelgasstruktur.',
+    ],
+    where: [
+      'När ved brinner reagerar kol och väte i veden med syre i luften. De nya bindningarna har lägre energi än de gamla, och skillnaden känns som värme.',
+    ],
+    misconceptions: [
+      { myth: 'Atomer reagerar för att de vill bli ädelgaser.', truth: 'De blir inte ädelgaser – de behåller sina protoner. De får bara samma elektronuppställning, och det är ett lågenergiläge.' },
+    ],
     simple: [
       'Atomer reagerar när de tillsammans kan nå ett läge med lägre energi.',
       'Det kan ske genom att elektroner flyttas från en atom till en annan, eller genom att atomer delar elektroner.',

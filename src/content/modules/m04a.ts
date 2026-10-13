@@ -1,0 +1,403 @@
+import { explain, fill, lesson, match, mcq, order, tf } from '../builders'
+
+export const m4a = [
+  lesson({
+    id: 'm4-l01',
+    title: 'Materians ursprung',
+    section: 'Var kommer atomerna ifrån?',
+    minutes: 11,
+    goal: 'Idag ska vi förstå var atomerna i allt omkring oss kommer ifrån.',
+    objectives: ['Beskriva att väte och helium bildades kort efter Big Bang.', 'Förklara att tyngre grundämnen bildas genom fusion i stjärnor.', 'Förklara varför man säger att vi består av stjärnstoft.'],
+    prerequisites: ['m1-l03'],
+    what: [
+      '**Materians ursprung** handlar om var atomerna kommer ifrån. Universum började för ungefär 13,8 miljarder år sedan med **Big Bang**, och då bildades de lättaste atomerna: väte och helium.',
+      'Nästan alla tyngre grundämnen – kol, syre, järn – har bildats senare, inne i stjärnor.',
+    ],
+    why: [
+      'Precis efter Big Bang var det för varmt och tätt för att atomkärnor skulle kunna hålla ihop länge. När universum svalnade kunde protoner och neutroner bilda de enklaste kärnorna.',
+      'Tyngre kärnor kräver enormt tryck och temperatur för att små kärnor ska smälta ihop. Det finns i stjärnornas inre.',
+    ],
+    how: [
+      'I stjärnor slås väte ihop till helium, helium till kol och syre och så vidare upp till järn. Det kallas **fusion**.',
+      'Ännu tyngre ämnen (som guld) bildas bland annat när stora stjärnor exploderar som supernovor eller när neutronstjärnor kolliderar. Explosionerna sprider atomerna ut i rymden, där de blir nya stjärnor, planeter – och vi.',
+    ],
+    where: [
+      'Kolet i ditt DNA och järnet i ditt blod har bildats i stjärnor som fanns innan solen. Du är bokstavligen gjord av stjärnstoft.',
+    ],
+    misconceptions: [
+      { myth: 'Big Bang var en explosion i rymden.', truth: 'Big Bang var när rymden själv började expandera. Det fanns inget "utanför" som det exploderade i.' },
+    ],
+    core: true,
+    curriculum: ['materia'],
+    simple: [
+      'För ungefär 13,8 miljarder år sedan började universum med Big Bang.',
+      'Först bildades de lättaste atomerna: väte och helium.',
+      'Tyngre grundämnen, som kol, syre och järn, har bildats inne i stjärnor. Atomerna i din kropp har alltså en gång funnits i stjärnor.',
+    ],
+    detailed: [
+      'Några minuter efter Big Bang hade protoner och neutroner bildats och slagits ihop till kärnor av väte och helium (och lite litium). Det var för varmt för att elektroner skulle stanna kvar – neutrala atomer bildades först efter ungefär 380 000 år.',
+      'I stjärnor slås lätta atomkärnor ihop till tyngre. Det kallas fusion. I solen slås väte ihop till helium, och energi frigörs som ljus och värme.',
+      'Stora stjärnor kan bilda grundämnen upp till järn genom fusion. När de dör exploderar de som supernovor och sprider ämnena i rymden. Ännu tyngre ämnen, som guld och uran, bildas bland annat vid supernovor och när neutronstjärnor kolliderar.',
+      'Av det utspridda materialet bildades nya stjärnor och planeter – även vårt solsystem för ungefär 4,6 miljarder år sedan. Materien på jorden har alltså återanvänts i ett kosmiskt kretslopp.',
+    ],
+    visual: {
+      kind: 'flow',
+      layout: 'line',
+      nodes: [
+        { label: 'Big Bang', detail: 'För ca 13,8 miljarder år sedan. Inom några minuter bildas kärnor av väte och helium.', icon: '💥' },
+        { label: 'Stjärnor bildas', detail: 'Gasmoln av väte dras ihop av gravitationen. Fusion startar: väte blir helium.', icon: '⭐' },
+        { label: 'Fusion i stora stjärnor', detail: 'Helium blir kol, kol blir syre … ända till järn. Varje steg frigör energi.', icon: '🔥' },
+        { label: 'Supernova', detail: 'Stjärnan exploderar. Grundämnena sprids ut, och ännu tyngre ämnen kan bildas.', icon: '🌟' },
+        { label: 'Nytt solsystem', detail: 'Ur stoftet bildas nya stjärnor och planeter – som solen och jorden.', icon: '🌍' },
+      ],
+      caption: 'Materians resa från Big Bang till jorden.',
+    },
+    analogy: {
+      text: 'Tänk på stjärnor som gigantiska kök som lagar "nya ingredienser". Det första köket (Big Bang) hade bara två råvaror: väte och helium. Stjärnorna kokar ihop dem till nya ingredienser – kol, syre, järn – och när en stjärna dör sprids ingredienserna ut så att nya kök (stjärnor och planeter) kan använda dem.',
+      limits: 'Kök följer recept som någon har skrivit. Fusion styrs av fysikens lagar: höga temperaturer och tryck som pressar ihop kärnorna.',
+    },
+    alternatives: ['Väte och helium kommer från Big Bang. Nästan allt annat kommer från stjärnor. Därför är du gjord av stjärnstoft.', 'Fusion = små kärnor smälter ihop till större. Det är motsatsen till kärnklyvning, där stora kärnor delas.'],
+    caveats: ['Fusion är en kärnreaktion – det är kärnan som ändras, inte bara elektronerna som i vanliga kemiska reaktioner.', 'Väte i din kropp (t.ex. i vatten) kommer faktiskt direkt från Big Bang.'],
+    check: mcq('Var har de flesta tyngre grundämnen, som kol och syre, bildats?', ['I Big Bang', 'Inne i stjärnor', 'På jorden'], 1, 'Tyngre grundämnen bildas genom fusion i stjärnor.', { wrong: { 0: 'Big Bang gav främst väte och helium.', 2: 'Grundämnen bildas inte på jorden i vanliga processer.' } }),
+    followUp: tf('Vid fusion slås lätta atomkärnor ihop till tyngre.', true, 'Ja, till exempel blir väte helium i solen.'),
+    apply: mcq('Varför säger man att människor är "gjorda av stjärnstoft"?', ['Kol, syre och kväve i kroppen bildades i stjärnor', 'Vi har kristaller i kroppen', 'Det är bara ett talesätt utan grund'], 0, 'Kroppens kol, syre, kväve och kalcium bildades i stjärnor som sedan exploderade.', { d: 2 }),
+    practice: [
+      order('Ordna händelserna i rätt tidsordning.', ['Big Bang', 'Väte och helium bildas', 'De första stjärnorna', 'Supernovor sprider grundämnen', 'Jorden bildas'], 'Från Big Bang till vårt solsystem.', { d: 2 }),
+      mcq('Vad bildas när väte genomgår fusion i solen?', ['Helium', 'Kol', 'Järn'], 0, 'I solen blir väte till helium.'),
+      fill('Ungefär hur många miljarder år gammalt är universum?', ['13,8', '13.8', '14'], 'Universum är ca 13,8 miljarder år gammalt.', { numeric: true }),
+      explain('Förklara hur grundämnena i din kropp har bildats.', 'Väte bildades kort efter Big Bang. Tyngre grundämnen som kol, syre och kväve bildades genom fusion inne i stjärnor. När stora stjärnor exploderade som supernovor spreds ämnena i rymden och blev material till nya stjärnor och planeter, som jorden.', [['Big Bang'], ['stjärna', 'stjärnor'], ['fusion', 'slås ihop'], ['supernova', 'exploder', 'sprids']], { min: 3, d: 3 }),
+    ],
+    summary: ['Big Bang för 13,8 miljarder år sedan gav väte och helium.', 'Tyngre ämnen bildas genom fusion i stjärnor.', 'Supernovor sprider ämnena.', 'Jorden och vi består av återanvänd stjärnmateria.'],
+    flashcards: [['Vad bildades i Big Bang?', 'Främst väte och helium.'], ['Vad är fusion?', 'När lätta atomkärnor slås ihop till tyngre.'], ['Vad sprider grundämnen i rymden?', 'Supernovor.']],
+    related: ['fusion', 'grundamne', 'materia'],
+  }),
+
+  lesson({
+    id: 'm4-l02',
+    title: 'Materians kretslopp',
+    section: 'Naturens kretslopp',
+    minutes: 10,
+    goal: 'Idag ska vi förstå att atomer återanvänds om och om igen i naturen.',
+    objectives: ['Förklara att materia inte försvinner utan går runt i kretslopp.', 'Beskriva producenter, konsumenter och nedbrytare.', 'Skilja på materians kretslopp och energins flöde.'],
+    prerequisites: ['m4-l01', 'm1-l23'],
+    what: [
+      '**Materians kretslopp** betyder att atomer aldrig försvinner utan används om och om igen. De vandrar mellan luft, mark, vatten och levande varelser.',
+    ],
+    why: [
+      'I kemiska reaktioner kan atomer inte skapas eller förstöras – de byter bara partner. Jorden får nästan inga nya atomer utifrån, så samma atomer måste återanvändas.',
+    ],
+    how: [
+      '**Producenter** (växter, alger) bygger upp organiska ämnen med hjälp av solljus. **Konsumenter** (djur) äter dem. **Nedbrytare** (bakterier, svampar) bryter ned döda rester till enkla ämnen som växterna kan ta upp igen.',
+      'Energin går däremot inte runt – den kommer från solen och lämnar till slut systemet som värme.',
+    ],
+    where: [
+      'Komposten hemma är materians kretslopp i miniatyr: matrester blir jord som nya växter kan använda.',
+    ],
+    misconceptions: [
+      { myth: 'Både materia och energi går i kretslopp.', truth: 'Materia går i kretslopp. Energi flödar igenom – den måste hela tiden fyllas på av solen.' },
+    ],
+    core: true,
+    curriculum: ['materia'],
+    simple: [
+      'Atomer försvinner inte. De byter bara plats och bildar nya ämnen.',
+      'Växter bygger upp ämnen, djur äter dem, och nedbrytare bryter ned döda rester.',
+      'Sedan kan växterna använda atomerna igen. Det kallas materians kretslopp.',
+    ],
+    detailed: [
+      'Producenter (gröna växter, alger) gör organiska ämnen av koldioxid, vatten och näringsämnen med hjälp av solljus – fotosyntes.',
+      'Konsumenter (djur) äter producenter eller andra djur. De bryter ned de organiska ämnena i cellandningen och bygger upp sin egen kropp.',
+      'Nedbrytare (bakterier, svampar, maskar) bryter ned döda växter och djur, avföring och löv till enkla oorganiska ämnen som koldioxid, vatten och mineralämnen.',
+      'Materien går runt i kretslopp, men energin gör det inte. Solenergin flödar genom ekosystemet och lämnar det till slut som värme. Därför behövs ständigt nytt solljus.',
+    ],
+    visual: {
+      kind: 'flow',
+      layout: 'cycle',
+      nodes: [
+        { label: 'Producenter', detail: 'Växter tar upp CO₂, vatten och mineraler och bygger organiska ämnen med solenergi.', icon: '🌱' },
+        { label: 'Konsumenter', detail: 'Djur äter växter och andra djur. Atomerna blir en del av deras kroppar.', icon: '🐇' },
+        { label: 'Döda rester', detail: 'Döda växter, djur, löv och avföring.', icon: '🍂' },
+        { label: 'Nedbrytare', detail: 'Bakterier och svampar bryter ned resterna till CO₂, vatten och mineralämnen.', icon: '🍄' },
+        { label: 'Oorganiska ämnen', detail: 'Koldioxid i luften och mineralämnen i jorden – redo att tas upp av växter igen.', icon: '🪨' },
+      ],
+      caption: 'Materians kretslopp i ett ekosystem.',
+    },
+    analogy: {
+      text: 'Materien är som LEGO-bitarna i en lekhörna. Någon bygger ett hus (växten), någon annan tar isär det och bygger en bil (djuret), och till slut läggs bitarna tillbaka i lådan (nedbrytarna). Inga bitar försvinner – de används igen och igen. Men barnens energi måste fyllas på med ny mat varje dag, precis som ekosystemet behöver nytt solljus.',
+      limits: 'LEGO-bitar förblir samma bitar. Atomer bildar hela tiden nya kemiska föreningar på vägen.',
+    },
+    alternatives: ['Materia = går runt. Energi = går igenom. Kom ihåg: atomer cirkulerar, energi flödar.', 'Kolatomen i din smörgås kan ha varit en del av en dinosaurie – och kan nästa år vara en del av ett träd.'],
+    caveats: ['En del materia kan lagras mycket länge utanför det snabba kretsloppet, till exempel kol i fossila bränslen och kalksten.'],
+    check: mcq('Vad gör nedbrytarna i ett ekosystem?', ['Tillverkar socker med solljus', 'Bryter ned döda rester till enkla ämnen', 'Äter levande växter'], 1, 'Nedbrytare som bakterier och svampar bryter ned döda rester.'),
+    followUp: tf('Atomer kan försvinna när ett djur dör.', false, 'Atomerna försvinner inte – nedbrytarna gör dem tillgängliga för nya organismer.'),
+    apply: mcq('Varför behöver ekosystemet ständigt nytt solljus, när materien återanvänds?', ['Energin går inte i kretslopp utan försvinner till slut som värme', 'Solljuset behövs för att bilda nya atomer', 'Växterna behöver ljus för att andas'], 0, 'Energin flödar genom ekosystemet och lämnar det som värme.', { d: 3 }),
+    practice: [
+      match('Para ihop grupp och exempel.', [['Producent', 'Gran'], ['Konsument', 'Räv'], ['Nedbrytare', 'Svamp']], 'Producenter bygger upp, konsumenter äter, nedbrytare bryter ned.'),
+      mcq('Vilken process använder producenterna för att bygga organiska ämnen?', ['Cellandning', 'Fotosyntes', 'Förbränning'], 1, 'Fotosyntesen omvandlar CO₂ och vatten till socker med solenergi.'),
+      tf('Utan nedbrytare skulle näringsämnena till slut ta slut för växterna.', true, 'Nedbrytarna frigör mineralämnen som växterna behöver.', { d: 2 }),
+      explain('Förklara skillnaden mellan hur materia och energi rör sig i ett ekosystem.', 'Materia går runt i kretslopp: atomer används om och om igen av producenter, konsumenter och nedbrytare. Energi går inte i kretslopp: den kommer in som solljus, förs vidare i näringskedjan och lämnar till slut ekosystemet som värme.', [['kretslopp', 'återanvänds', 'cirkulerar'], ['energi'], ['sol', 'solljus'], ['värme']], { min: 3, d: 3 }),
+    ],
+    summary: ['Atomer försvinner inte – de återanvänds.', 'Producenter, konsumenter och nedbrytare driver kretsloppet.', 'Materia cirkulerar, energi flödar igenom.', 'Solljuset är energikällan.'],
+    flashcards: [['Vad gör en producent?', 'Bygger organiska ämnen med fotosyntes.'], ['Vad gör nedbrytare?', 'Bryter ned döda rester till enkla ämnen.'], ['Går energi i kretslopp?', 'Nej, energin flödar igenom och lämnar som värme.']],
+    related: ['ekosystem', 'nedbrytare', 'fotosyntes', 'naringskedja'],
+  }),
+
+  lesson({
+    id: 'm4-l03',
+    title: 'Kolets kretslopp',
+    section: 'Naturens kretslopp',
+    minutes: 12,
+    goal: 'Idag ska vi förstå hur kol rör sig mellan luft, levande organismer, hav och berggrund.',
+    objectives: ['Beskriva kolets kretslopp med fotosyntes, cellandning, nedbrytning och förbränning.', 'Skilja på det snabba och det långsamma kretsloppet.', 'Förklara hur människan påverkar kolets kretslopp.'],
+    prerequisites: ['m4-l02'],
+    what: [
+      '**Kolets kretslopp** beskriver hur kolatomer vandrar mellan luftens koldioxid (CO₂), levande organismer, hav och berggrund.',
+    ],
+    why: [
+      'Kol är grunden i alla organiska ämnen – socker, fett, proteiner och DNA. Allt levande behöver alltså kol, och det tas från luften via växterna.',
+    ],
+    how: [
+      'Växter tar upp CO₂ i **fotosyntesen** och bygger socker. Alla organismer släpper ut CO₂ när de **cellandas**. Nedbrytare frigör kol från döda organismer.',
+      'Kol kan också lagras länge: i skog, i havet och som fossila bränslen. När vi eldar kol, olja och gas släpps kol som legat lagrat i miljontals år ut snabbt – det ökar halten CO₂ i luften.',
+    ],
+    where: [
+      'Varje andetag du tar ut innehåller koldioxid från din cellandning. Bilavgaser innehåller fossilt kol.',
+    ],
+    misconceptions: [
+      { myth: 'Växter andas bara in koldioxid.', truth: 'Växter cellandas också dygnet runt och släpper ut CO₂. På dagen tar fotosyntesen upp mer än de släpper ut.' },
+    ],
+    core: true,
+    curriculum: ['materia', 'amnen-miljo'],
+    simple: [
+      'Kol finns i luften som koldioxid, CO₂.',
+      'Växter tar upp koldioxid i fotosyntesen. Djur och växter släpper ut koldioxid när de cellandas.',
+      'När vi eldar fossila bränslen släpps kol ut som legat lagrat i miljontals år.',
+    ],
+    detailed: [
+      'Snabba kretsloppet: fotosyntes (CO₂ → socker) och cellandning (socker → CO₂) flyttar kol mellan atmosfären och levande organismer på dagar till år.',
+      'Haven löser stora mängder koldioxid. En del blir kolsyra, vilket gör haven surare (havsförsurning). Kalkskal hos plankton och koraller kan sjunka till botten och bli kalksten.',
+      'Långsamma kretsloppet: döda växter och plankton som inte bröts ned helt blev under miljontals år kol, olja och naturgas. Kalksten och vulkaner är också en del av det långsamma kretsloppet.',
+      'Människan för över kol från det långsamma kretsloppet till det snabba genom att elda fossila bränslen och genom avskogning. Halten CO₂ i luften har ökat från ca 280 ppm före industrialiseringen till över 420 ppm i dag.',
+    ],
+    visual: { kind: 'sim', id: 'carbon-cycle', caption: 'Ändra utsläppen och se vad som händer med koldioxiden i atmosfären.' },
+    analogy: {
+      text: 'Tänk på kolet som pengar. Det snabba kretsloppet är som lönekontot: pengar går in och ut varje dag. Fossila bränslen är som ett sparkonto som ingen rört på miljontals år. När vi eldar fossila bränslen tar vi ut hela sparkontot och lägger det på lönekontot – plötsligt finns det mycket mer "kol-pengar" i omlopp än förut.',
+      limits: 'Pengar kan man sätta tillbaka på sparkontot. Kol som släppts ut tar extremt lång tid att lagras tillbaka i berggrunden.',
+    },
+    alternatives: ['Fotosyntes tar IN koldioxid. Cellandning och förbränning släpper UT koldioxid. Nedbrytning släpper också ut.', 'Kolet i ett träd: kom från luften (fotosyntes) → går tillbaka till luften när trädet förmultnar eller eldas.'],
+    caveats: ['Biobränsle från växter släpper också ut CO₂ när det eldas, men kolet togs upp från luften nyligen. Därför räknas det som en del av det snabba kretsloppet.'],
+    check: mcq('Vilken process tar upp koldioxid från luften?', ['Fotosyntes', 'Cellandning', 'Förbränning'], 0, 'Växter tar upp CO₂ i fotosyntesen.', { wrong: { 1: 'Cellandning släpper ut CO₂.', 2: 'Förbränning släpper ut CO₂.' } }),
+    followUp: tf('Fossila bränslen består av kol från växter och djur som levde för miljontals år sedan.', true, 'Ja, därför kallas de fossila.'),
+    apply: mcq('Varför ökar halten koldioxid i atmosfären när vi eldar kol och olja, men inte på samma sätt när ett träd förmultnar?', ['Fossilt kol har legat utanför det snabba kretsloppet i miljontals år', 'Träd innehåller inget kol', 'Fossila bränslen bildar nytt kol när de brinner'], 0, 'Trädets kol togs nyss upp ur luften. Fossilt kol tillförs det snabba kretsloppet som ett extra tillskott.', { d: 3 }),
+    practice: [
+      match('Tar upp eller släpper ut CO₂?', [['Fotosyntes', 'Tar upp'], ['Cellandning', 'Släpper ut'], ['Förbränning av olja', 'Släpper ut'], ['Haven', 'Tar upp']], 'Fotosyntes och haven tar upp, cellandning och förbränning släpper ut.', { d: 2 }),
+      mcq('Vad händer när mycket koldioxid löses i haven?', ['Haven blir surare', 'Haven blir saltare', 'Haven blir varmare'], 0, 'CO₂ bildar kolsyra – havsförsurning.', { d: 2 }),
+      tf('Avskogning påverkar kolets kretslopp.', true, 'Färre träd tar upp CO₂, och när skog bränns eller förmultnar släpps kol ut.'),
+      explain('Beskriv hur en kolatom kan vandra från luften, genom en växt och ett djur, och tillbaka till luften.', 'Kolatomen finns i koldioxid i luften. En växt tar upp den i fotosyntesen och bygger in den i socker. Ett djur äter växten. Djuret cellandas och kolatomen släpps ut som koldioxid igen. Om djuret dör kan nedbrytare frigöra kolet som koldioxid.', [['koldioxid', 'CO₂', 'CO2'], ['fotosyntes'], ['äter', 'konsument', 'djur'], ['cellandning', 'andas', 'nedbryt']], { min: 3, d: 2 }),
+    ],
+    summary: ['Fotosyntes tar upp CO₂, cellandning släpper ut.', 'Hav och berggrund lagrar mycket kol.', 'Fossila bränslen = långsamma kretsloppet.', 'Människan ökar CO₂-halten i luften.'],
+    flashcards: [['Vilken process tar upp CO₂?', 'Fotosyntesen.'], ['Varför ökar CO₂ när vi eldar fossila bränslen?', 'Kol som legat lagrat länge tillförs det snabba kretsloppet.'], ['Vad är havsförsurning?', 'Haven blir surare när de löser CO₂ som bildar kolsyra.']],
+    related: ['kolets-kretslopp', 'fotosyntes', 'cellandning', 'fossila-branslen'],
+  }),
+
+  lesson({
+    id: 'm4-l04',
+    title: 'Kvävets kretslopp',
+    section: 'Naturens kretslopp',
+    minutes: 11,
+    goal: 'Idag ska vi förstå hur kväve rör sig i naturen och varför det är viktigt för livet.',
+    objectives: ['Förklara varför organismer behöver kväve.', 'Beskriva kvävefixering, upptag och nedbrytning.', 'Förklara hur gödsling kan leda till övergödning.'],
+    prerequisites: ['m4-l02'],
+    what: [
+      '**Kvävets kretslopp** beskriver hur kväve vandrar mellan luften, marken och levande organismer.',
+    ],
+    why: [
+      'Alla organismer behöver kväve för att bygga proteiner och DNA. Luften är 78 % kvävgas (N₂), men N₂ har en mycket stark trippelbindning som nästan inga organismer kan bryta.',
+    ],
+    how: [
+      'Vissa bakterier kan bryta bindningen och göra om N₂ till ämnen som växter kan ta upp (**kvävefixering**). Växterna bygger proteiner, djur äter växterna, och nedbrytare återför kvävet till marken.',
+      'Andra bakterier gör om kväveföreningar till N₂ igen, så att kvävet återvänder till luften.',
+    ],
+    where: [
+      'Ärtväxter (bönor, klöver) har kvävefixerande bakterier i rötterna och används för att göda jorden naturligt. Konstgödsel tillverkas av luftens kväve i fabrik.',
+    ],
+    misconceptions: [
+      { myth: 'Vi får vårt kväve genom att andas.', truth: 'Kvävet vi andas in andas vi ut igen. Kroppens kväve kommer från proteiner i maten.' },
+    ],
+    core: true,
+    curriculum: ['materia', 'amnen-miljo'],
+    simple: [
+      'Alla levande organismer behöver kväve för att bygga proteiner och DNA.',
+      'Luften är till 78 % kvävgas, N₂, men de flesta organismer kan inte använda den direkt.',
+      'Vissa bakterier kan omvandla kvävgas till ämnen som växter kan ta upp. Det kallas kvävefixering.',
+    ],
+    detailed: [
+      'N₂ har en trippelbindning som är mycket svår att bryta. Kvävefixerande bakterier – till exempel i rotknölar hos ärtväxter som klöver och bönor – omvandlar N₂ till ammonium (NH₄⁺). Blixtar fixerar också lite kväve.',
+      'Andra bakterier omvandlar ammonium till nitrat (NO₃⁻), som växter gärna tar upp genom rötterna. Djur får sitt kväve genom att äta växter eller andra djur.',
+      'Nedbrytare frigör kväve från döda organismer och avföring som ammonium. Vissa bakterier omvandlar nitrat tillbaka till kvävgas som går ut i luften (denitrifikation).',
+      'Människan fixerar enorma mängder kväve med Haber–Bosch-metoden. För mycket gödsel kan läcka ut i sjöar och hav och ge övergödning: alger växer explosionsartat, och när de bryts ned går syret åt så att bottnarna blir döda. Det är ett stort problem i Östersjön.',
+    ],
+    visual: {
+      kind: 'flow',
+      layout: 'cycle',
+      nodes: [
+        { label: 'Kvävgas N₂ i luften', detail: '78 % av luften. Trippelbindningen gör den svår att använda för de flesta organismer.', icon: '🌬️' },
+        { label: 'Kvävefixering', detail: 'Bakterier (t.ex. i ärtväxters rötter), blixtar och Haber–Bosch omvandlar N₂ till ammonium.', icon: '🦠' },
+        { label: 'Nitrat i marken', detail: 'Bakterier gör om ammonium till nitrat, som växter tar upp.', icon: '🌱' },
+        { label: 'Proteiner i växter och djur', detail: 'Växter bygger proteiner och DNA. Djur äter växterna.', icon: '🐄' },
+        { label: 'Nedbrytning', detail: 'Döda organismer och avföring bryts ned och kvävet frigörs som ammonium igen.', icon: '🍂' },
+        { label: 'Denitrifikation', detail: 'Bakterier omvandlar nitrat till N₂ som går tillbaka till luften.', icon: '↩️' },
+      ],
+      caption: 'Kvävets kretslopp.',
+    },
+    analogy: {
+      text: 'Kvävgas i luften är som pengar i en främmande valuta. Det finns massor av den, men affären (växten) tar inte emot den. Kvävefixerande bakterier är växelkontoret som byter till en valuta (ammonium och nitrat) som växterna kan använda.',
+      limits: 'Ett växelkontor byter fram och tillbaka på sekunder. Kvävets omvandlingar tar tid och kräver energi för bakterierna.',
+    },
+    alternatives: ['Kväve behövs till proteiner. Luften har massor men i "fel form". Bakterier fixar det.', 'Klöver på en åker är som gratis gödsel – bakterierna i rötterna fixerar kväve från luften.'],
+    caveats: ['Kvävets kretslopp har fler steg och ämnen än som visas här (t.ex. nitrit, NO₂⁻). Det räcker att kunna huvuddragen.'],
+    check: mcq('Varför behöver levande organismer kväve?', ['För att bygga proteiner och DNA', 'För att andas', 'För att bilda kolhydrater'], 0, 'Kväve finns i aminosyror (proteiner) och i DNA.'),
+    followUp: tf('De flesta växter kan använda kvävgasen i luften direkt.', false, 'Växter behöver kväve som nitrat eller ammonium, som bakterier har omvandlat.'),
+    apply: mcq('Varför kan för mycket gödsling skada Östersjön?', ['Kväve läcker ut och ger övergödning och syrebrist', 'Gödsel gör vattnet salt', 'Gödsel dödar alla alger'], 0, 'Överskottet av näring gör att alger växer kraftigt. När de bryts ned förbrukas syret.', { d: 2 }),
+    practice: [
+      order('Ordna stegen i övergödning.', ['Gödsel läcker ut i havet', 'Alger växer kraftigt', 'Algerna dör och sjunker', 'Nedbrytning förbrukar syret', 'Döda bottnar'], 'Övergödning leder till syrebrist.', { d: 2 }),
+      mcq('Vad gör kvävefixerande bakterier?', ['Omvandlar N₂ till ammonium', 'Bryter ned proteiner', 'Gör nitrat till socker'], 0, 'De bryter trippelbindningen i N₂ och bildar ammonium.'),
+      fill('Hur många procent av luften består ungefär av kvävgas?', ['78'], 'Luften är ca 78 % kväve och 21 % syre.', { numeric: true }),
+      explain('Förklara varför bönder ibland odlar klöver på sina åkrar.', 'Klöver är en ärtväxt med kvävefixerande bakterier i rotknölarna. Bakterierna omvandlar kvävgas från luften till ammonium som växterna kan använda. När klövern bryts ned blir jorden rikare på kväve, så att man behöver mindre konstgödsel.', [['kvävefixer', 'fixerar'], ['bakterie'], ['rot', 'rötter', 'rotknöl'], ['gödsel', 'näring', 'jorden']], { min: 3, d: 3 }),
+    ],
+    summary: ['Kväve behövs till proteiner och DNA.', 'Luftens N₂ måste fixeras av bakterier (eller industri).', 'Växter tar upp nitrat; djur äter växter.', 'För mycket kväve ger övergödning.'],
+    flashcards: [['Vad är kvävefixering?', 'När N₂ från luften omvandlas till ammonium, t.ex. av bakterier.'], ['Vad är övergödning?', 'För mycket näring i vatten → algblomning → syrebrist.']],
+    related: ['kvavets-kretslopp', 'overgodning', 'nedbrytare'],
+  }),
+
+  lesson({
+    id: 'm4-l05',
+    title: 'Vattnets kretslopp',
+    section: 'Naturens kretslopp',
+    minutes: 9,
+    goal: 'Idag ska vi förstå hur vatten rör sig mellan hav, luft, land och levande organismer.',
+    objectives: ['Beskriva avdunstning, kondensation, nederbörd och avrinning.', 'Förklara att solen driver vattnets kretslopp.', 'Förklara hur vattnets kretslopp hänger ihop med att ämnen sprids.'],
+    prerequisites: ['m4-l02'],
+    what: [
+      '**Vattnets kretslopp** beskriver hur vatten rör sig mellan hav, luft, moln, mark och levande varelser.',
+    ],
+    why: [
+      'Solen ger energi som får vatten att avdunsta, och tyngdkraften drar ned det igen. Utan kretsloppet skulle det inte finnas sötvatten på land.',
+    ],
+    how: [
+      'Vatten **avdunstar** från hav och sjöar och från växters blad. Ångan stiger, kyls och **kondenserar** till moln. Vattnet faller som **nederbörd** (regn, snö) och rinner tillbaka via bäckar, älvar och grundvatten.',
+      'När vatten avdunstar lämnas salterna kvar. Därför är regn sötvatten fast det kommer från saltvatten.',
+    ],
+    where: [
+      'Imma på badrumsspegeln är kondensation. Kläder som torkar på tork är avdunstning.',
+    ],
+    misconceptions: [
+      { myth: 'Det bildas nytt vatten hela tiden.', truth: 'Det är i stort sett samma vatten som har cirkulerat i miljarder år.' },
+    ],
+    core: true,
+    curriculum: ['materia'],
+    simple: [
+      'Solen värmer vatten i hav och sjöar så att det avdunstar och blir vattenånga.',
+      'Högt upp kyls ångan och bildar moln. Sedan faller vattnet som regn eller snö.',
+      'Vattnet rinner tillbaka till havet genom bäckar, älvar och grundvatten.',
+    ],
+    detailed: [
+      'Avdunstning: vatten blir ånga, främst från haven. Växter släpper också ut vattenånga genom klyvöppningarna i bladen (transpiration).',
+      'Kondensation: ångan kyls och bildar små droppar – moln. Nederbörd: dropparna blir stora och faller som regn, snö eller hagel.',
+      'Infiltration och avrinning: vattnet sjunker ned i marken och blir grundvatten, eller rinner av till sjöar och hav.',
+      'När vatten avdunstar blir salter kvar – därför är regnvatten nästan rent. Men på vägen tillbaka kan vattnet ta med sig ämnen, till exempel gödsel, försurande ämnen och miljögifter, från marken till sjöar och hav.',
+    ],
+    visual: {
+      kind: 'flow',
+      layout: 'cycle',
+      nodes: [
+        { label: 'Avdunstning', detail: 'Solen värmer vattnet i havet. Det blir vattenånga. Salterna blir kvar.', icon: '☀️' },
+        { label: 'Kondensation', detail: 'Ångan kyls högt upp och bildar moln av små droppar.', icon: '☁️' },
+        { label: 'Nederbörd', detail: 'Regn, snö och hagel faller på land och hav.', icon: '🌧️' },
+        { label: 'Grundvatten och avrinning', detail: 'Vattnet sjunker ned i marken eller rinner till sjöar och älvar – och tar med sig lösta ämnen.', icon: '🏞️' },
+        { label: 'Havet', detail: 'Vattnet kommer tillbaka till havet. Kretsloppet börjar om.', icon: '🌊' },
+      ],
+      caption: 'Vattnets kretslopp drivs av solen.',
+    },
+    analogy: {
+      text: 'Vattnets kretslopp är som att koka pasta med lock på kastrullen. Vattnet kokar (avdunstar), ångan samlas som droppar under locket (moln) och droppar tillbaka ned i kastrullen (regn). Solen är spisplattan.',
+      limits: 'I kastrullen är allt inom några decimeter. På jorden kan en vattenmolekyl stanna tusentals år i en glaciär eller i djuphavet innan den fortsätter.',
+    },
+    alternatives: ['Fyra ord: avdunstar – kondenserar – faller – rinner. Om och om igen.', 'Vattnet du dricker i dag kan ha varit en del av ett moln förra veckan – och av havet för länge sedan.'],
+    caveats: ['Mängden vatten på jorden är ungefär konstant, men fördelningen ändras, t.ex. när is smälter.'],
+    check: mcq('Vad driver vattnets kretslopp?', ['Solens värme', 'Månens ljus', 'Jordens magnetfält'], 0, 'Solen får vattnet att avdunsta.'),
+    followUp: tf('Moln bildas när vattenånga kyls och kondenserar.', true, 'Ja, ångan blir små droppar.'),
+    apply: mcq('Varför är regnvatten nästan saltfritt, trots att det mesta avdunstat från havet?', ['Salterna stannar kvar när vattnet avdunstar', 'Molnen filtrerar bort saltet', 'Saltet blir till syre'], 0, 'Det är bara vattenmolekylerna som avdunstar – salterna blir kvar.', { d: 2 }),
+    practice: [
+      order('Ordna vattnets kretslopp.', ['Avdunstning', 'Kondensation', 'Nederbörd', 'Avrinning'], 'Solen värmer → moln → regn → tillbaka till havet.'),
+      mcq('Vad kallas det när växter släpper ut vattenånga genom bladen?', ['Transpiration', 'Fotosyntes', 'Kondensation'], 0, 'Transpiration sker genom klyvöppningarna.', { d: 2 }),
+      tf('Vattnets kretslopp kan sprida föroreningar från land till hav.', true, 'Regn och avrinning tar med sig lösta ämnen.'),
+      explain('Förklara hur gödsel på en åker kan hamna i havet.', 'När det regnar sjunker vattnet ned i marken eller rinner av till diken, bäckar och älvar. Gödselns näringsämnen löser sig i vattnet och följer med till sjöar och slutligen havet. Det är en del av vattnets kretslopp.', [['regn', 'nederbörd'], ['löser', 'lösta', 'följer med'], ['rinner', 'avrinning', 'älv', 'bäck'], ['hav', 'sjö']], { min: 3, d: 2 }),
+    ],
+    summary: ['Solen driver vattnets kretslopp.', 'Avdunstning → kondensation → nederbörd → avrinning.', 'Salter blir kvar när vatten avdunstar.', 'Vatten sprider lösta ämnen.'],
+    flashcards: [['Vad är kondensation?', 'När vattenånga kyls och blir vätska (t.ex. moln).'], ['Vad driver vattnets kretslopp?', 'Solen.']],
+    related: ['vattnets-kretslopp', 'aggregationsform'],
+  }),
+
+  lesson({
+    id: 'm4-l06',
+    title: 'Resurser och råvaror',
+    section: 'Människan och resurserna',
+    minutes: 10,
+    goal: 'Idag ska vi förstå skillnaden mellan förnybara och icke-förnybara resurser och varför återvinning är viktig.',
+    objectives: ['Skilja på förnybara och icke-förnybara resurser.', 'Ge exempel på råvaror och vad de används till.', 'Förklara varför återvinning sparar resurser och energi.'],
+    prerequisites: ['m4-l02'],
+    what: [
+      '**Råvaror** är det vi tar från naturen för att tillverka saker. **Förnybara resurser** fylls på igen inom rimlig tid (skog, vind); **icke-förnybara** tar slut (olja, metaller).',
+    ],
+    why: [
+      'Fossila bränslen och malmer har bildats under miljontals år. Vi använder dem mycket snabbare än de bildas – för oss tar de alltså slut.',
+    ],
+    how: [
+      'Atomerna i en metall försvinner aldrig, men de sprids ut och blir svåra att samla in. **Återvinning** samlar ihop dem igen och sparar ofta mycket energi – för aluminium ungefär 95 %.',
+    ],
+    where: [
+      'Pantburkar, återvinningsstationen och insamling av gamla mobiler och batterier.',
+    ],
+    misconceptions: [
+      { myth: 'Förnybara resurser kan användas hur mycket som helst.', truth: 'Om skog avverkas snabbare än den växer upp tar den också slut.' },
+    ],
+    core: true,
+    curriculum: ['materia', 'amnen-miljo'],
+    simple: [
+      'Råvaror är det vi tar från naturen för att tillverka saker, till exempel trä, malm och olja.',
+      'Förnybara resurser kan växa upp eller fyllas på igen inom rimlig tid, som skog och vind.',
+      'Icke-förnybara resurser tar slut, som olja och metaller i berggrunden. Därför är återvinning viktigt.',
+    ],
+    detailed: [
+      'Förnybart: skog, grödor, vatten, sol- och vindenergi. Men även förnybara resurser kan överutnyttjas – om man avverkar skog snabbare än den växer.',
+      'Icke-förnybart: olja, kol, naturgas, metaller och mineraler. De har bildats under miljontals år.',
+      'Metaller som aluminium kan återvinnas nästan hur många gånger som helst. Att återvinna aluminium kräver bara ca 5 % av energin som behövs för att framställa ny aluminium ur bauxit.',
+      'Vissa metaller till elektronik och batterier (t.ex. kobolt, litium och sällsynta jordartsmetaller) är ovanliga och bryts ibland under svåra förhållanden för människor och miljö. Att återvinna mobiler och batterier är därför både en miljöfråga och en social fråga.',
+    ],
+    visual: {
+      kind: 'compare',
+      columns: [
+        { title: 'Förnybara resurser', points: ['Skog och grödor', 'Sol, vind, vattenkraft', 'Kan förnyas – om de inte överutnyttjas'], tone: 'green' },
+        { title: 'Icke-förnybara resurser', points: ['Olja, kol, naturgas', 'Metaller och mineraler', 'Tar slut – måste återvinnas'], tone: 'cream' },
+      ],
+    },
+    analogy: {
+      text: 'Förnybara resurser är som en fruktträdgård: om du plockar lagom mycket kommer det ny frukt varje år. Icke-förnybara resurser är som en burk kakor som ingen bakar mer av – när de är slut är de slut. Återvinning är att samla smulorna och baka nya kakor av dem.',
+      limits: 'Kakor som äts upp är borta. Metallatomer försvinner aldrig – de blir bara utspridda och svårare att samla in.',
+    },
+    alternatives: ['Kan det växa upp igen inom en livstid? Förnybart. Tog det miljontals år att bilda? Icke-förnybart.', 'Återvinning = mindre gruvdrift + mindre energi + mindre avfall.'],
+    caveats: ['Gränsen kan vara flytande: torv växer, men så långsamt att den ofta räknas som icke-förnybar.'],
+    check: mcq('Vilken resurs är icke-förnybar?', ['Skog', 'Olja', 'Vind'], 1, 'Olja tog miljontals år att bilda.'),
+    followUp: tf('Metallatomer försvinner när en burk slängs.', false, 'Atomerna finns kvar – men kan bli svåra att samla in om de inte återvinns.'),
+    apply: mcq('Varför är det klokt att återvinna aluminiumburkar?', ['Det kräver bara en liten del av energin jämfört med ny aluminium', 'Aluminium kan inte slängas', 'Aluminium är förnybart'], 0, 'Återvinning sparar ca 95 % av energin.', { d: 2 }),
+    practice: [
+      match('Förnybar eller icke-förnybar?', [['Solenergi', 'Förnybar'], ['Kol', 'Icke-förnybar'], ['Trä', 'Förnybar'], ['Koppar', 'Icke-förnybar']], 'Förnybart kan fyllas på igen.'),
+      tf('Även förnybara resurser kan ta slut om de överutnyttjas.', true, 'Till exempel om skog avverkas snabbare än den växer.', { d: 2 }),
+      mcq('Vilka metaller är viktiga för batterier i elbilar?', ['Litium och kobolt', 'Guld och silver', 'Bly och tenn'], 0, 'Litiumjonbatterier innehåller litium och ofta kobolt och nickel.', { d: 2 }),
+      explain('Förklara varför återvinning av mobiltelefoner är både en miljöfråga och en social fråga.', 'Mobiler innehåller ovanliga metaller som är icke-förnybara. Om de återvinns behövs mindre ny gruvdrift, vilket sparar energi och minskar miljöskador. Gruvdrift sker ibland under dåliga arbetsförhållanden, så minskad gruvdrift är också en social fråga.', [['metall', 'kobolt', 'litium'], ['gruv', 'brytning'], ['energi', 'miljö'], ['arbetsförhållanden', 'människor', 'social', 'barn']], { min: 3, d: 3 }),
+    ],
+    summary: ['Råvaror kommer från naturen.', 'Förnybara kan förnyas, icke-förnybara tar slut.', 'Återvinning sparar resurser och energi.', 'Metallatomer försvinner aldrig – de sprids ut.'],
+    flashcards: [['Ge exempel på en icke-förnybar resurs.', 'Olja, kol, metaller.'], ['Hur mycket energi sparar återvinning av aluminium?', 'Ca 95 %.']],
+    related: ['fornybar', 'atervinning', 'hallbar-utveckling'],
+  }),
+]

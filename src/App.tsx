@@ -25,7 +25,7 @@ const NotFound = lazy(() => import('@/pages/NotFound'))
 
 const PAGE_TITLES: Record<string, string> = {
   '/': 'Hem',
-  '/kurs': 'Kursen',
+  '/kurs': 'Läroboken',
   '/periodiska-systemet': 'Periodiska systemet',
   '/atombyggaren': 'Atombyggaren',
   '/labb': 'Labbet',
@@ -71,6 +71,7 @@ export function App() {
           <Route path="/kurs" element={<CoursePage />} />
           <Route path="/modul/:moduleId" element={<ModulePage />} />
           <Route path="/lektion/:lessonId" element={<LessonPage />} />
+          <Route path="/lektion/:lessonId/steg" element={<LessonPage mode="steps" />} />
           <Route path="/periodiska-systemet" element={<PeriodicTablePage />} />
           <Route path="/atombyggaren" element={<AtomBuilderPage />} />
           <Route path="/labb" element={<LabPage />} />

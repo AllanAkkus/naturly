@@ -4,10 +4,31 @@ export const m1a = [
   lesson({
     id: 'm1-l01',
     title: 'Vad är materia?',
+    section: 'Atomens delar',
     minutes: 8,
     goal: 'Idag ska vi förstå vad materia är.',
     objectives: ['Förklara vad materia är med egna ord.', 'Ge exempel på materia i fast form, flytande form och gasform.', 'Veta att all materia består av små partiklar.'],
     prerequisites: [],
+    what: [
+      '**Materia** är allt som har massa och tar plats. Massa betyder ungefär "hur mycket det finns av något" – det är det du mäter när du väger något.',
+      'Din kropp, kaffet i koppen, stolen du sitter på och luften du andas är materia. Ljus, ljud och värme är **inte** materia – de är energi.',
+    ],
+    why: [
+      'Naturkunskapen börjar här eftersom allt annat bygger på det. När vi senare pratar om celler, hormoner eller klimat pratar vi egentligen om materia som rör sig och förändras.',
+      'Att dela in världen i "materia" och "energi" hjälper oss att förstå vad som kan vägas, flyttas och byggas om – och vad som inte kan det.',
+    ],
+    how: [
+      'All materia består av pyttesmå partiklar (atomer och molekyler) som hela tiden rör sig. Hur snabbt de rör sig och hur nära de sitter avgör om ämnet är **fast**, **flytande** eller **gas**.',
+      'När du värmer något får partiklarna mer energi och rör sig mer. Därför smälter is till vatten och vatten kokar till ånga. Det är fortfarande samma ämne – bara partiklarnas rörelse har ändrats.',
+    ],
+    where: [
+      'Is i frysen (fast), vatten i kranen (flytande) och ånga från vattenkokaren (gas) – samma ämne i tre former.',
+      'När du blåser upp en ballong fyller du den med materia. Luften har massa, även om du inte ser den.',
+    ],
+    misconceptions: [
+      { myth: 'Luft är "ingenting".', truth: 'Luft är materia. Den består av gaser som kväve och syre, och den har massa – en kubikmeter luft väger ungefär 1,2 kg.' },
+      { myth: 'När vatten kokar bort försvinner det.', truth: 'Vattnet blir vattenånga och sprids ut i luften. Partiklarna finns kvar, de syns bara inte.' },
+    ],
     simple: [
       'Materia är allt som har massa och tar plats.',
       'Din kaffekopp, vattnet i den och luften omkring dig är materia.',
@@ -50,10 +71,31 @@ export const m1a = [
   lesson({
     id: 'm1-l02',
     title: 'Vad är en atom?',
+    section: 'Atomens delar',
     minutes: 10,
     goal: 'Idag ska vi förstå vad en atom är.',
     objectives: ['Förklara att atomen är materians minsta byggsten som behåller ämnets egenskaper.', 'Namnge atomens tre delar: protoner, neutroner och elektroner.', 'Veta att atomen har en kärna i mitten och elektroner runt om.'],
     prerequisites: ['m1-l01'],
+    what: [
+      'En **atom** är den minsta biten av ett ämne som fortfarande är just det ämnet. Delar du en guldbit om och om igen kommer du till slut till en enda guldatom.',
+      'En atom har en **kärna** i mitten och **elektroner** som rör sig runt den. Kärnan består av **protoner** och **neutroner**. Varje del får en egen sida i boken.',
+    ],
+    why: [
+      'Atomer finns för att materia inte går att dela hur länge som helst och fortfarande vara samma ämne. Någonstans tar det stopp – och den minsta biten kallar vi atom.',
+      'Det är praktiskt för oss: om vi förstår ett hundratal sorters atomer kan vi förklara nästan allt omkring oss, eftersom allt är byggt av dem.',
+    ],
+    how: [
+      'Kärnan är extremt liten men innehåller nästan all massa. Runt den finns ett stort område där elektronerna rör sig. Det mesta av en atom är alltså tomrum.',
+      'Det finns 118 kända sorters atomer, och varje sort kallas ett **grundämne** (till exempel syre, kol och järn). Vilken sort en atom är avgörs av hur många protoner den har.',
+    ],
+    where: [
+      'Allt du ser är atomer: vattnet du dricker (väte och syre), din blyertspenna (kol) och aluminiumfolien i köket (aluminium).',
+      'Din kropp består av ungefär 7 000 000 000 000 000 000 000 000 000 atomer – mest väte, syre, kol och kväve.',
+    ],
+    misconceptions: [
+      { myth: 'Atomer är små kulor som ser ut som på bilderna.', truth: 'Bilderna är modeller. Elektronerna rör sig inte i snygga ringar – de beskrivs bättre som ett moln runt kärnan.' },
+      { myth: 'Atomer går inte att dela.', truth: 'Namnet betyder "odelbar", men atomen består av protoner, neutroner och elektroner. Kemiskt beter den sig ändå som en minsta enhet.' },
+    ],
     simple: [
       'En atom är en pytteliten byggsten som allt omkring oss består av.',
       'Inuti atomen finns en kärna. I kärnan finns protoner och neutroner.',
@@ -95,10 +137,31 @@ export const m1a = [
   lesson({
     id: 'm1-l03',
     title: 'Vad är atomkärnan?',
+    section: 'Atomens delar',
     minutes: 8,
     goal: 'Idag ska vi förstå vad atomkärnan är.',
     objectives: ['Förklara att kärnan finns i atomens mitt och innehåller protoner och neutroner.', 'Veta att nästan all atomens massa finns i kärnan.', 'Veta att kärnan är positivt laddad.'],
     prerequisites: ['m1-l02'],
+    what: [
+      '**Atomkärnan** är atomens mittpunkt. Den består av protoner och neutroner, som med ett gemensamt namn kallas **nukleoner** (från latinets *nucleus* = kärna).',
+      'Kärnan är pytteliten jämfört med hela atomen, men nästan all atomens massa finns där.',
+    ],
+    why: [
+      'Kärnan finns för att protoner och neutroner dras mycket starkt till varandra när de kommer riktigt nära. Den kraften kallas **den starka kärnkraften**, och den håller ihop dem i en liten klump.',
+      'Protonerna är positivt laddade och stöter egentligen bort varandra. Neutronerna hjälper till att hålla ihop kärnan eftersom de bidrar med kärnkraft utan att bidra med fler plusladdningar.',
+    ],
+    how: [
+      'Eftersom protonerna är positiva blir hela kärnan positiv. Den positiva kärnan drar till sig de negativa elektronerna, och det är därför elektronerna stannar kvar runt kärnan.',
+      'Protoner och neutroner väger ungefär lika mycket. Elektronerna väger nästan ingenting i jämförelse, och därför ligger nästan all vikt i kärnan.',
+    ],
+    where: [
+      'I kärnkraftverk delas stora atomkärnor (uran). Energin som frigörs kommer från kärnkraften som höll ihop kärnan.',
+      'Solen lyser för att små kärnor (väte) slås ihop till större (helium) långt inne i den.',
+    ],
+    misconceptions: [
+      { myth: 'Kärnan är ungefär lika stor som atomen.', truth: 'Om atomen vore en fotbollsarena skulle kärnan vara som en ärta i mitten.' },
+      { myth: 'Elektronerna finns i kärnan.', truth: 'Kärnan innehåller bara protoner och neutroner. Elektronerna finns utanför, runt kärnan.' },
+    ],
     simple: [
       'Atomkärnan är atomens mitt.',
       'Den består av protoner och neutroner, som tillsammans kallas nukleoner.',
@@ -139,10 +202,30 @@ export const m1a = [
   lesson({
     id: 'm1-l04',
     title: 'Vad är protoner?',
+    section: 'Atomens delar',
     minutes: 10,
     goal: 'Idag ska vi förstå vad en proton är.',
     objectives: ['Förklara att protonen är en positivt laddad partikel i kärnan.', 'Förklara att antalet protoner bestämmer vilket grundämne atomen är.', 'Koppla antalet protoner till atomnumret.'],
     prerequisites: ['m1-l03'],
+    what: [
+      'En **proton** är en av de små partiklarna i atomkärnan. Den har en **positiv laddning** (+1). Laddning förklaras på en egen sida – just nu räcker det att veta att den är "plus".',
+      'Antalet protoner är atomens identitet. Alla atomer med 6 protoner är kol, alla med 8 är syre.',
+    ],
+    why: [
+      'Protonens laddning är en grundläggande egenskap hos den, precis som att den har massa. Ingen vet ett "djupare varför" – det är så naturen är byggd. Men vi vet vad laddningen **gör**: den drar till sig negativa elektroner.',
+      'Att antalet protoner avgör grundämnet beror på just det: fler protoner betyder starkare plus i kärnan, vilket i sin tur bestämmer hur många elektroner atomen håller och därmed hur den beter sig kemiskt.',
+    ],
+    how: [
+      'Protonerna sitter i kärnan tillsammans med neutronerna. En proton väger ungefär 1 u (atommassenhet) – lika mycket som en neutron och cirka 1 836 gånger mer än en elektron.',
+      'Byter en atom antal protoner blir den ett annat grundämne. Det händer inte i vanliga kemiska reaktioner, bara i kärnreaktioner, som i solen eller vid radioaktivt sönderfall.',
+    ],
+    where: [
+      'I periodiska systemet står grundämnena i ordning efter antal protoner: väte har 1, helium 2, litium 3 och så vidare.',
+      'Magnetkameror på sjukhus (MR) använder egenskaper hos protonerna i kroppens vatten för att skapa bilder.',
+    ],
+    misconceptions: [
+      { myth: 'En atom kan bli ett annat ämne om den får fler elektroner.', truth: 'Fler elektroner gör den till en jon, men den är fortfarande samma ämne. Bara antalet protoner avgör grundämnet.' },
+    ],
     simple: [
       'En proton är en liten partikel i atomkärnan.',
       'Protonen är positivt laddad (+).',
@@ -188,10 +271,30 @@ export const m1a = [
   lesson({
     id: 'm1-l05',
     title: 'Vad är neutroner?',
+    section: 'Atomens delar',
     minutes: 9,
     goal: 'Idag ska vi förstå vad en neutron är.',
     objectives: ['Förklara att neutronen är en oladdad partikel i kärnan.', 'Förklara att neutroner påverkar massan men inte grundämnet.', 'Räkna ut antalet neutroner från masstal och atomnummer.'],
     prerequisites: ['m1-l04'],
+    what: [
+      'En **neutron** är den andra sortens partikel i atomkärnan. Den har **ingen laddning** – den är neutral, därav namnet.',
+      'Neutronen väger ungefär lika mycket som en proton.',
+    ],
+    why: [
+      'Neutronerna behövs för att hålla ihop kärnan. Protonerna stöter bort varandra eftersom de alla är positiva. Neutronerna bidrar med den starka kärnkraften som limmar ihop kärnan, men utan att lägga till mer bortstötning.',
+      'Därför har större atomer ofta fler neutroner än protoner – ju fler protoner som trängs, desto mer "lim" behövs.',
+    ],
+    how: [
+      'Neutronerna påverkar atomens massa men inte vilket grundämne den är. Två kolatomer kan ha 6 eller 8 neutroner och är båda kol. Sådana varianter kallas **isotoper**.',
+      'Har en kärna för få eller för många neutroner blir den instabil och kan falla sönder. Det är det som kallas **radioaktivitet**.',
+    ],
+    where: [
+      'Kol-14-metoden, som används för att åldersbestämma gamla fynd, bygger på en kolisotop med 8 neutroner.',
+      'I kärnkraftverk är det neutroner som träffar urankärnor och får dem att klyvas.',
+    ],
+    misconceptions: [
+      { myth: 'Neutroner och elektroner tar ut varandras laddning.', truth: 'Neutronen har ingen laddning alls. Det är protoner (+) och elektroner (−) som tar ut varandra.' },
+    ],
     simple: [
       'En neutron är en partikel i atomkärnan.',
       'Neutronen har ingen laddning – den är neutral.',
@@ -232,10 +335,30 @@ export const m1a = [
   lesson({
     id: 'm1-l06',
     title: 'Vad är elektroner?',
+    section: 'Atomens delar',
     minutes: 9,
     goal: 'Idag ska vi förstå vad en elektron är.',
     objectives: ['Förklara att elektronen är en negativt laddad partikel som finns runt kärnan.', 'Veta att elektroner väger mycket lite.', 'Veta att elektronerna styr hur atomer reagerar kemiskt.'],
     prerequisites: ['m1-l02'],
+    what: [
+      'En **elektron** är en mycket liten partikel med **negativ laddning** (−1). Elektronerna finns runt atomkärnan, inte i den.',
+      'En elektron väger nästan ingenting – ungefär 1/1836 av en proton.',
+    ],
+    why: [
+      'Elektronerna stannar kring kärnan för att minus dras till plus. Den positiva kärnan håller fast de negativa elektronerna.',
+      'Elektronerna är atomens "yta". När två atomer möts är det elektronerna som möts först – därför är det elektronerna som bestämmer hur atomer reagerar och binder till varandra.',
+    ],
+    how: [
+      'Elektronerna befinner sig i olika energinivåer, som vi kallar **skal**. De yttersta elektronerna sitter lösast och kan flyttas till en annan atom eller delas med en annan atom.',
+      'När elektroner flyttas från en atom till en annan bildas **joner**. När atomer delar elektroner bildas **molekyler**. Båda delarna har egna sidor längre fram.',
+    ],
+    where: [
+      'Elektrisk ström i en sladd är elektroner som rör sig genom metallen.',
+      'När du drar en ballong mot håret flyttas elektroner från håret till ballongen – därför står håret rakt ut.',
+    ],
+    misconceptions: [
+      { myth: 'Elektronerna snurrar i ringar som planeter runt solen.', truth: 'Ringarna är en förenklad modell. I verkligheten beskrivs elektronerna som moln där de troligen finns.' },
+    ],
     simple: [
       'En elektron är en mycket liten partikel som rör sig runt atomkärnan.',
       'Elektronen är negativt laddad (−).',
@@ -274,10 +397,30 @@ export const m1a = [
   lesson({
     id: 'm1-l07',
     title: 'Positiv och negativ laddning',
+    section: 'Atomens delar',
     minutes: 8,
     goal: 'Idag ska vi förstå vad positiv och negativ laddning betyder.',
     objectives: ['Förklara att lika laddningar stöter bort varandra och olika laddningar attraherar.', 'Ange laddningen hos protoner, neutroner och elektroner.', 'Räkna ut nettoladdningen när man vet antalet protoner och elektroner.'],
     prerequisites: ['m1-l04', 'm1-l05', 'm1-l06'],
+    what: [
+      '**Elektrisk laddning** är en egenskap hos vissa partiklar som gör att de drar i eller trycker på varandra. Det finns två sorter: **positiv (+)** och **negativ (−)**.',
+      'Protoner är +1, elektroner är −1 och neutroner har ingen laddning (0).',
+    ],
+    why: [
+      'Laddning är en grundegenskap i naturen – vi kan inte förklara den med något enklare. Men den förklarar väldigt mycket: varför elektronerna stannar runt kärnan, varför atomer binder till varandra och varför nervsignaler fungerar.',
+      'Utan laddning skulle atomer inte hålla ihop, och då skulle det inte finnas några molekyler, celler eller människor.',
+    ],
+    how: [
+      'Regeln är enkel: **olika laddningar dras till varandra** (+ och −). **Lika laddningar stöter bort varandra** (+ och +, eller − och −).',
+      'Laddningar kan räknas ihop. Har något 3 plus och 3 minus blir summan 0 – det är **neutralt**. Har det 3 plus och 2 minus blir summan +1.',
+    ],
+    where: [
+      'Statisk elektricitet: när du drar av dig en tröja och det knastrar har laddningar flyttats mellan tröjan och håret.',
+      'Blixtar är enorma mängder laddning som rusar mellan moln och mark.',
+    ],
+    misconceptions: [
+      { myth: 'Positiv betyder bra och negativ betyder dåligt.', truth: 'Plus och minus är bara namn på två motsatta sorter. Ingen är bättre än den andra – det kunde lika gärna ha hetat röd och blå.' },
+    ],
     simple: [
       'Laddning är en egenskap som får partiklar att dra i eller trycka på varandra.',
       'Plus och minus dras till varandra. Plus och plus, eller minus och minus, stöter bort varandra.',
@@ -324,10 +467,27 @@ export const m1a = [
   lesson({
     id: 'm1-l08',
     title: 'Vad betyder att en atom är neutral?',
+    section: 'Atomens delar',
     minutes: 8,
     goal: 'Idag ska vi förstå vad det betyder att en atom är neutral.',
     objectives: ['Förklara att en neutral atom har lika många elektroner som protoner.', 'Räkna ut antalet elektroner i en neutral atom.', 'Skilja på "neutral" och "stabil".'],
     prerequisites: ['m1-l07'],
+    what: [
+      'En atom är **neutral** när den har lika många elektroner som protoner. Då tar plus och minus ut varandra och den totala laddningen blir 0.',
+    ],
+    why: [
+      'Atomer blir neutrala av sig själva. En positiv kärna drar till sig elektroner tills det finns lika mycket minus som plus – då finns det ingen extra dragningskraft kvar som fångar fler elektroner.',
+    ],
+    how: [
+      'Räkna: **laddning = antal protoner − antal elektroner**. En syreatom med 8 protoner och 8 elektroner får 8 − 8 = 0.',
+      'Om en atom förlorar eller tar upp elektroner blir den inte längre neutral – den blir en **jon**. Det kommer vi till senare.',
+    ],
+    where: [
+      'Alla atomer i periodiska systemet beskrivs som neutrala. Står det 11 vid natrium betyder det 11 protoner – och i den neutrala atomen alltså också 11 elektroner.',
+    ],
+    misconceptions: [
+      { myth: 'Neutral betyder att atomen inte har några laddade partiklar.', truth: 'En neutral atom är full av laddade partiklar. Det är bara summan som blir noll.' },
+    ],
     simple: [
       'En atom är neutral när den har lika många elektroner som protoner.',
       'Då tar plus och minus ut varandra, och laddningen blir 0.',

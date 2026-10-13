@@ -29,7 +29,7 @@ export default function LabPage() {
             </div>
             <h2 className="mt-3 font-semibold group-hover:text-primary">Atombyggaren</h2>
             <p className="mt-1 text-sm text-muted">Bygg atomer, isotoper och joner med protoner, neutroner och elektroner.</p>
-            <p className="mt-2 text-xs text-muted">Modul 1–2</p>
+            <p className="mt-2 text-xs text-muted">Kapitel 1–2</p>
           </Card>
         </Link>
         {SIMULATION_LIST.map((s) => (
@@ -44,7 +44,7 @@ export default function LabPage() {
               <h2 className="mt-3 font-semibold group-hover:text-primary">{s.title}</h2>
               <p className="mt-1 text-sm text-muted">{s.goal}</p>
               <p className="mt-2 text-xs text-muted">
-                Modul {getModule(s.moduleId)?.number ?? '–'}: {getModule(s.moduleId)?.title ?? ''}
+                Kapitel {getModule(s.moduleId)?.number ?? '–'}: {getModule(s.moduleId)?.title ?? ''}
               </p>
             </Card>
           </Link>

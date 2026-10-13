@@ -4,10 +4,29 @@ export const m3a = [
   lesson({
     id: 'm3-l01',
     title: 'Grundämnen och kemiska föreningar',
+    section: 'Olika sorters ämnen',
     minutes: 9,
     goal: 'Idag ska vi förstå skillnaden mellan ett grundämne och en kemisk förening.',
     objectives: ['Förklara vad ett grundämne är.', 'Förklara vad en kemisk förening är.', 'Avgöra om ett ämne är ett grundämne eller en förening utifrån formeln.'],
     prerequisites: ['m1-l22'],
+    what: [
+      'Ett **grundämne** består av bara en sorts atomer, t.ex. järn (Fe) eller syrgas (O₂).',
+      'En **kemisk förening** består av två eller fler **olika** sorters atomer som sitter ihop med kemiska bindningar, t.ex. vatten (H₂O) och koksalt (NaCl).',
+    ],
+    why: [
+      'Det finns bara 118 grundämnen, men de kan kombineras på miljontals sätt. Därför är nästan alla ämnen omkring oss föreningar.',
+      'Skillnaden är viktig eftersom en förening kan ha helt andra egenskaper än grundämnena den är gjord av.',
+    ],
+    how: [
+      'Natrium är en metall som exploderar i vatten och klor är en giftig gas. Tillsammans blir de koksalt, som du strör på maten. Bindningarna ändrar egenskaperna helt.',
+      'En förening kan bara delas upp i sina grundämnen genom en kemisk reaktion.',
+    ],
+    where: [
+      'Guld i ett smycke är ett grundämne. Rost (järnoxid), socker och vatten är föreningar.',
+    ],
+    misconceptions: [
+      { myth: 'O₂ är en förening eftersom det är två atomer.', truth: 'Båda atomerna är syre, så det är ett grundämne. En förening kräver olika sorters atomer.' },
+    ],
     simple: [
       'Ett grundämne består av bara en sorts atomer, till exempel syrgas (O₂) eller järn (Fe).',
       'En kemisk förening består av två eller fler olika sorters atomer som sitter ihop, till exempel vatten (H₂O).',
@@ -49,10 +68,28 @@ export const m3a = [
   lesson({
     id: 'm3-l02',
     title: 'Blandningar och rena ämnen',
+    section: 'Olika sorters ämnen',
     minutes: 9,
     goal: 'Idag ska vi förstå vad en blandning är och hur man kan separera den.',
     objectives: ['Skilja på rena ämnen och blandningar.', 'Skilja på homogena och heterogena blandningar.', 'Beskriva några separationsmetoder.'],
     prerequisites: ['m3-l01'],
+    what: [
+      'Ett **rent ämne** består av bara ett ämne (ett grundämne eller en förening).',
+      'En **blandning** består av flera ämnen som är blandade men **inte** kemiskt bundna till varandra.',
+    ],
+    why: [
+      'I naturen är nästan allt blandningar: luft, havsvatten, jord, blod. För att kunna använda ett ämne måste vi ofta skilja ut det ur en blandning.',
+    ],
+    how: [
+      'Eftersom ämnena i en blandning inte är bundna kan de separeras med fysikaliska metoder: filtrering, avdunstning, destillation eller en magnet.',
+      'Blandningar kan vara jämna (saltvatten – du ser inte saltet) eller ojämna (müsli – du ser de olika delarna).',
+    ],
+    where: [
+      'Kaffebryggaren filtrerar bort sump. Salt utvinns ur havsvatten genom avdunstning. Råolja destilleras till bensin och diesel.',
+    ],
+    misconceptions: [
+      { myth: 'Kranvatten är ett rent ämne.', truth: 'Kranvatten innehåller lösta salter och gaser. Det är en blandning – destillerat vatten är nästan rent.' },
+    ],
     simple: [
       'Ett rent ämne består av bara ett ämne, till exempel destillerat vatten.',
       'En blandning består av flera ämnen som inte sitter ihop kemiskt, till exempel saltvatten eller luft.',
@@ -98,10 +135,28 @@ export const m3a = [
   lesson({
     id: 'm3-l03',
     title: 'Organisk och oorganisk kemi',
+    section: 'Olika sorters ämnen',
     minutes: 10,
     goal: 'Idag ska vi förstå skillnaden mellan organiska och oorganiska ämnen.',
     objectives: ['Förklara att organiska ämnen är kolföreningar.', 'Ge exempel på organiska och oorganiska ämnen i naturen och industrin.', 'Förklara varför kol kan bilda så många föreningar.'],
     prerequisites: ['m3-l01'],
+    what: [
+      '**Organiska ämnen** är kolföreningar, oftast med kol och väte i grunden – t.ex. socker, fett, proteiner, bensin och plast.',
+      '**Oorganiska ämnen** är alla andra: vatten, salter, metaller, mineraler och några enkla kolföreningar som koldioxid.',
+    ],
+    why: [
+      'Ordet "organisk" kommer från att man förr trodde att sådana ämnen bara kunde bildas av levande organismer. 1828 tillverkade Friedrich Wöhler urea i ett labb, och då föll den idén. Namnet blev kvar.',
+      'Kol är speciellt: det har 4 valenselektroner och kan binda till fyra andra atomer, även till andra kolatomer. Därför kan kol bilda långa kedjor och ringar – grunden för livets molekyler.',
+    ],
+    how: [
+      'Organiska ämnen brinner ofta och bildar då koldioxid och vatten. Oorganiska ämnen som salter och mineraler brinner inte.',
+    ],
+    where: [
+      'Organiskt: maten du äter, kläder av bomull eller polyester, bensin. Oorganiskt: dricksvatten, koksalt, sten, glas.',
+    ],
+    misconceptions: [
+      { myth: '"Organisk" betyder ekologisk eller naturlig.', truth: 'I kemi betyder organisk bara "kolförening". Plast är organisk kemi, fast den är tillverkad i fabrik.' },
+    ],
     core: true,
     curriculum: ['org-oorg'],
     simple: [
@@ -145,10 +200,27 @@ export const m3a = [
   lesson({
     id: 'm3-l04',
     title: 'Kol och kolföreningar',
+    section: 'Olika sorters ämnen',
     minutes: 10,
     goal: 'Idag ska vi lära oss om kolväten och några viktiga kolföreningar.',
     objectives: ['Förklara vad ett kolväte är.', 'Namnge de enklaste kolvätena (metan, etan, propan, butan).', 'Känna till alkoholer, kolhydrater och plaster som kolföreningar.'],
     prerequisites: ['m3-l03'],
+    what: [
+      'Ett **kolväte** är en förening som bara består av **kol** och **väte**. Det enklaste är metan, CH₄.',
+    ],
+    why: [
+      'Kolväten är viktiga eftersom de innehåller mycket energi i sina bindningar. När de brinner frigörs energin – därför är de bra bränslen.',
+    ],
+    how: [
+      'Kolatomerna binder till varandra i kedjor, och väteatomer sitter runt omkring. Ju längre kedja, desto tjockare blir ämnet: metan är gas, bensin är vätska, paraffin är fast.',
+      'Vid förbränning: kolväte + syre → koldioxid + vatten (+ energi).',
+    ],
+    where: [
+      'Naturgas och biogas (metan), gasol (propan och butan), bensin och diesel. Plaster tillverkas också av kolväten.',
+    ],
+    misconceptions: [
+      { myth: 'Biogas och naturgas är olika ämnen.', truth: 'Båda är främst metan. Skillnaden är var kolet kommer ifrån – nyligen levande material eller fossila lager.' },
+    ],
     core: true,
     curriculum: ['org-oorg'],
     simple: [
@@ -186,10 +258,29 @@ export const m3a = [
   lesson({
     id: 'm3-l05',
     title: 'Vatten och lösningar',
+    section: 'Vatten, syror och baser',
     minutes: 10,
     goal: 'Idag ska vi förstå varför vatten är så bra på att lösa ämnen.',
     objectives: ['Förklara att vatten är en polär molekyl.', 'Förklara hur salt och socker löser sig i vatten.', 'Förklara regeln "lika löser lika".'],
     prerequisites: ['m1-l21', 'm3-l02'],
+    what: [
+      'En **lösning** är en jämn blandning där ett ämne (det **lösta ämnet**) har fördelats i ett annat (**lösningsmedlet**), t.ex. salt i vatten.',
+      'Vattenmolekylen är **polär**: lite negativ vid syret och lite positiv vid väteatomerna.',
+    ],
+    why: [
+      'Syre drar hårdare i de delade elektronerna än väte gör. Därför blir syresidan lite negativ och vätesidan lite positiv.',
+      'De laddade sidorna drar i joner och andra polära molekyler och kan dra isär dem. Därför löser vatten så många ämnen.',
+    ],
+    how: [
+      'När salt löses omringas Na⁺ av vattnets negativa syresidor och Cl⁻ av de positiva vätesidorna. Jonerna lossnar från kristallen och sprids i vattnet.',
+      'Opolära ämnen som olja har inga laddade sidor att dra i. Därför blandas inte olja och vatten.',
+    ],
+    where: [
+      'Blod, svett, saft, havsvatten och kaffe är lösningar. Kroppens celler är fyllda av vattenlösningar.',
+    ],
+    misconceptions: [
+      { myth: 'När socker löses i vatten försvinner det.', truth: 'Sockermolekylerna finns kvar, utspridda mellan vattenmolekylerna. Det smakar ju fortfarande sött.' },
+    ],
     simple: [
       'Vattenmolekylen är lite negativ vid syret och lite positiv vid vätena. Den är polär.',
       'Därför kan vatten dra isär salter och lösa många ämnen.',
@@ -225,10 +316,27 @@ export const m3a = [
   lesson({
     id: 'm3-l06',
     title: 'Syror och baser',
+    section: 'Vatten, syror och baser',
     minutes: 10,
     goal: 'Idag ska vi förstå vad syror och baser är.',
     objectives: ['Förklara att syror avger vätejoner (H⁺).', 'Förklara att baser tar upp vätejoner och ofta bildar OH⁻.', 'Ge exempel på syror och baser i vardagen och kroppen.'],
     prerequisites: ['m3-l05', 'm1-l17'],
+    what: [
+      'En **syra** är ett ämne som kan avge vätejoner (H⁺). En **bas** är ett ämne som kan ta upp vätejoner.',
+    ],
+    why: [
+      'Vätejoner är mycket reaktiva. Syror är frätande just för att H⁺ reagerar med många ämnen. Baser är frätande på sitt sätt, eftersom de kan dra åt sig H⁺ från andra ämnen.',
+    ],
+    how: [
+      'I vatten bildar syror fler H⁺ (egentligen H₃O⁺). Baser ger fler hydroxidjoner (OH⁻).',
+      'Blandar man en syra och en bas reagerar H⁺ och OH⁻ till vatten: H⁺ + OH⁻ → H₂O. Det kallas **neutralisation**.',
+    ],
+    where: [
+      'Citronsyra i citroner, ättiksyra i ättika, saltsyra i magen. Baser: bikarbonat, tvål, kaustiksoda i avloppsrensare.',
+    ],
+    misconceptions: [
+      { myth: 'Bara syror är farliga.', truth: 'Starka baser som kaustiksoda är minst lika frätande. Använd skyddsglasögon för båda.' },
+    ],
     core: true,
     curriculum: ['org-oorg', 'amnen-miljo'],
     simple: [

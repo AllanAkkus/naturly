@@ -4,10 +4,29 @@ export const m2a = [
   lesson({
     id: 'm2-l01',
     title: 'Vad är periodiska systemet?',
+    section: 'Läsa tabellen',
     minutes: 8,
     goal: 'Idag ska vi förstå vad periodiska systemet är och varför det är så användbart.',
     objectives: ['Förklara att periodiska systemet visar alla grundämnen ordnade efter atomnummer.', 'Veta att rader kallas perioder och kolumner kallas grupper.', 'Veta att ämnen i samma grupp liknar varandra.'],
     prerequisites: ['m1-l09'],
+    what: [
+      '**Periodiska systemet** är en tabell över alla 118 kända grundämnen. Varje ruta är ett grundämne.',
+      'Ämnena står i ordning efter **atomnummer** (antal protoner), och tabellen är formad så att ämnen som liknar varandra hamnar i samma kolumn.',
+    ],
+    why: [
+      'På 1800-talet hade kemister hittat ett sextiotal grundämnen och såg att egenskaper upprepades med jämna mellanrum. Dmitrij Mendelejev ordnade dem 1869 i en tabell som visade mönstret – han kunde till och med förutsäga ämnen som ännu inte var upptäckta.',
+      'Vi vet i dag varför mönstret finns: det beror på hur elektronerna fyller skalen. Ämnen med lika många valenselektroner beter sig likt.',
+    ],
+    how: [
+      'Raderna kallas **perioder** och kolumnerna **grupper**. Var ett ämne står berättar om dess elektroner och därmed hur det reagerar.',
+      'Till vänster och i mitten finns metaller, till höger ickemetaller och längst till höger ädelgaserna.',
+    ],
+    where: [
+      'Tabellen hänger i nästan varje kemisal och är kemistens viktigaste uppslagsbok. Du får ofta ha den med dig på prov.',
+    ],
+    misconceptions: [
+      { myth: 'Man måste kunna periodiska systemet utantill.', truth: 'Man behöver förstå hur man läser det. Själva tabellen får man nästan alltid titta i.' },
+    ],
     simple: [
       'Periodiska systemet är en tabell över alla 118 grundämnen.',
       'Grundämnena står i ordning efter atomnummer – antalet protoner.',
@@ -46,10 +65,27 @@ export const m2a = [
   lesson({
     id: 'm2-l02',
     title: 'Hur hittar man ett grundämne?',
+    section: 'Läsa tabellen',
     minutes: 8,
     goal: 'Idag ska vi lära oss att snabbt hitta ett grundämne i periodiska systemet.',
     objectives: ['Hitta ett grundämne med hjälp av atomnummer, symbol eller namn.', 'Läsa av vad som står i en ruta.', 'Ange vilken period och grupp ett grundämne finns i.'],
     prerequisites: ['m2-l01'],
+    what: [
+      'Varje ruta i periodiska systemet innehåller fakta om ett grundämne: **atomnummer**, **kemisk symbol** och ofta **namn** och **atommassa**.',
+    ],
+    why: [
+      'Rutan samlar allt man oftast behöver på ett ställe, så att man snabbt kan räkna protoner, elektroner och neutroner.',
+    ],
+    how: [
+      'Letar du efter ett nummer: atomnumret ökar med 1 för varje ruta, från vänster till höger, rad för rad.',
+      'Letar du efter ett namn: leta efter symbolen. Den är ofta början på det latinska eller engelska namnet.',
+    ],
+    where: [
+      'Rutorna ser lite olika ut i olika böcker, men atomnumret och symbolen finns alltid med.',
+    ],
+    misconceptions: [
+      { myth: 'Det stora talet med decimaler i rutan är atomnumret.', truth: 'Talet med decimaler är atommassan. Atomnumret är alltid ett heltal.' },
+    ],
     simple: [
       'Varje ruta i periodiska systemet är ett grundämne.',
       'I rutan står atomnumret, den kemiska symbolen och ofta namn och atommassa.',
@@ -86,10 +122,27 @@ export const m2a = [
   lesson({
     id: 'm2-l03',
     title: 'Atomnummer och kemiska symboler',
+    section: 'Läsa tabellen',
     minutes: 9,
     goal: 'Idag ska vi lära oss hur kemiska symboler fungerar och hur de hänger ihop med atomnumret.',
     objectives: ['Skriva kemiska symboler korrekt (stor + liten bokstav).', 'Koppla ihop symbol, namn och atomnummer för vanliga grundämnen.', 'Förstå att symbolen alltid hör ihop med ett bestämt atomnummer.'],
     prerequisites: ['m2-l02'],
+    what: [
+      'En **kemisk symbol** är en förkortning på en eller två bokstäver för ett grundämne, t.ex. H för väte och Na för natrium.',
+    ],
+    why: [
+      'Symbolerna är internationella. Väte heter olika saker på olika språk, men symbolen H förstår alla kemister.',
+      'Vissa symboler kommer från latin: Na från *natrium*, Fe från *ferrum* (järn), Au från *aurum* (guld).',
+    ],
+    how: [
+      'Första bokstaven är alltid stor, andra alltid liten. Symbolen och atomnumret hör alltid ihop: Na = 11 protoner, oavsett vad.',
+    ],
+    where: [
+      'I kemiska formler som NaCl och H₂O och på näringsdeklarationer (Na, K, Fe).',
+    ],
+    misconceptions: [
+      { myth: 'Symbolen är alltid de första bokstäverna i det svenska namnet.', truth: 'Ofta, men inte alltid. Järn = Fe, guld = Au, bly = Pb, kvicksilver = Hg.' },
+    ],
     simple: [
       'Varje grundämne har en kemisk symbol med en eller två bokstäver.',
       'Första bokstaven är alltid stor, den andra alltid liten: Co är kobolt, men CO är kolmonoxid!',
@@ -125,10 +178,27 @@ export const m2a = [
   lesson({
     id: 'm2-l04',
     title: 'Perioder och grupper',
+    section: 'Läsa tabellen',
     minutes: 10,
     goal: 'Idag ska vi förstå vad perioder och grupper berättar om atomerna.',
     objectives: ['Förklara att periodnumret anger antalet elektronskal.', 'Förklara att ämnen i samma grupp har lika många valenselektroner.', 'Använda period och grupp för att beskriva en atoms elektronuppställning.'],
     prerequisites: ['m2-l02', 'm1-l13'],
+    what: [
+      '**Perioder** är raderna (1–7). **Grupper** är kolumnerna (1–18).',
+    ],
+    why: [
+      'Uppdelningen speglar elektronernas skal. En ny rad börjar varje gång ett nytt skal börjar fyllas. Ämnen i samma kolumn har lika många valenselektroner och liknar därför varandra.',
+    ],
+    how: [
+      '**Periodnumret** = antal elektronskal. Natrium står i period 3 → 3 skal.',
+      '**Gruppnumret** säger (för huvudgrupperna) antalet valenselektroner: grupp 1 → 1, grupp 2 → 2, grupp 13–18 → 3–8.',
+    ],
+    where: [
+      'Grupp 1 kallas alkalimetaller, grupp 17 halogener och grupp 18 ädelgaser – namnen används ofta i kemi.',
+    ],
+    misconceptions: [
+      { myth: 'Ämnen i samma rad liknar varandra mest.', truth: 'Det är ämnen i samma kolumn (grupp) som liknar varandra.' },
+    ],
     simple: [
       'Periodnumret berättar hur många elektronskal atomen har.',
       'Gruppnumret berättar (för huvudgrupperna) hur många elektroner som finns i yttersta skalet.',
@@ -164,10 +234,27 @@ export const m2a = [
   lesson({
     id: 'm2-l05',
     title: 'Metaller',
+    section: 'Ämnenas familjer',
     minutes: 9,
     goal: 'Idag ska vi förstå vad som kännetecknar metaller.',
     objectives: ['Beskriva typiska egenskaper hos metaller.', 'Hitta metallerna i periodiska systemet.', 'Förklara varför metaller ofta bildar positiva joner.'],
     prerequisites: ['m2-l04'],
+    what: [
+      '**Metaller** är grundämnen som oftast är blanka, leder elektricitet och värme bra och går att böja och forma. Ungefär 80 % av grundämnena är metaller.',
+    ],
+    why: [
+      'Metallatomer har få valenselektroner som sitter löst. I en metallbit lossnar de och rör sig fritt mellan atomerna, som ett elektron"hav". De fria elektronerna förklarar att metaller leder ström och värme och att de glänser.',
+    ],
+    how: [
+      'När metaller reagerar avger de gärna sina valenselektroner och bildar **positiva joner**.',
+      'Metallerna står till vänster och i mitten av periodiska systemet.',
+    ],
+    where: [
+      'Koppar i elkablar, aluminium i burkar, järn i stål – och natrium, kalium och kalcium som joner i din kropp.',
+    ],
+    misconceptions: [
+      { myth: 'Alla metaller är hårda och fasta.', truth: 'Kvicksilver är flytande i rumstemperatur och natrium kan skäras med kniv.' },
+    ],
     simple: [
       'De flesta grundämnen är metaller. De står till vänster och i mitten av periodiska systemet.',
       'Metaller är ofta blanka, leder el och värme och går att böja och forma.',
@@ -210,10 +297,26 @@ export const m2a = [
   lesson({
     id: 'm2-l06',
     title: 'Ickemetaller',
+    section: 'Ämnenas familjer',
     minutes: 9,
     goal: 'Idag ska vi förstå vad som kännetecknar ickemetaller.',
     objectives: ['Beskriva typiska egenskaper hos ickemetaller.', 'Hitta ickemetallerna i periodiska systemet.', 'Förklara att ickemetaller tar upp eller delar elektroner.'],
     prerequisites: ['m2-l05'],
+    what: [
+      '**Ickemetaller** är grundämnen som oftast inte leder ström, inte glänser och ofta är gaser, t.ex. syre, kväve och klor. De står till höger i periodiska systemet (och väte uppe till vänster).',
+    ],
+    why: [
+      'Ickemetaller har många valenselektroner och håller hårt i dem. De har inga fria elektroner att leda ström med.',
+    ],
+    how: [
+      'Ickemetaller tar upp elektroner och bildar **negativa joner** när de möter metaller, eller **delar** elektroner med andra ickemetaller och bildar molekyler.',
+    ],
+    where: [
+      'Livets viktigaste grundämnen är ickemetaller: kol, väte, syre, kväve, fosfor och svavel.',
+    ],
+    misconceptions: [
+      { myth: 'Alla ickemetaller är gaser.', truth: 'Kol och svavel är fasta och brom är flytande.' },
+    ],
     simple: [
       'Ickemetaller finns till höger i periodiska systemet, och dessutom väte.',
       'De leder oftast inte el och är ofta gaser, som syre och kväve.',
@@ -249,10 +352,26 @@ export const m2a = [
   lesson({
     id: 'm2-l07',
     title: 'Ädelgaser',
+    section: 'Ämnenas familjer',
     minutes: 8,
     goal: 'Idag ska vi förstå varför ädelgaserna nästan aldrig reagerar.',
     objectives: ['Nämna några ädelgaser och var de står.', 'Förklara att ädelgaser har fullt yttersta skal.', 'Ge exempel på hur ädelgaser används.'],
     prerequisites: ['m2-l04', 'm1-l15'],
+    what: [
+      '**Ädelgaserna** är grundämnena i grupp 18: helium, neon, argon, krypton, xenon och radon.',
+    ],
+    why: [
+      'De har redan fullt yttersta skal. Därför finns det ingen energivinst i att reagera, och de är nästan helt **reaktionströga**.',
+    ],
+    how: [
+      'Ädelgaser finns som enskilda atomer, inte som molekyler. De bildar nästan inga föreningar.',
+    ],
+    where: [
+      'Helium i ballonger (lätt och brinner inte), argon i glödlampor och svetsgas, neon i skyltar. Radon är radioaktivt och kan läcka in i hus från marken.',
+    ],
+    misconceptions: [
+      { myth: 'Ädelgaser kan aldrig reagera.', truth: 'Under extrema förhållanden kan t.ex. xenon bilda föreningar, men i vardagen reagerar de i praktiken inte.' },
+    ],
     simple: [
       'Ädelgaserna står längst till höger, i grupp 18.',
       'De har fullt yttersta skal.',

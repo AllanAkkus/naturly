@@ -43,7 +43,7 @@ export function CourseJourney({ compact = false }: { compact?: boolean }) {
               </span>
               <span className="min-w-0 flex-1">
                 <span className="flex items-center gap-2 text-xs text-muted">
-                  Modul {m.number}
+                  Kapitel {m.number}
                   {isRec && (
                     <span className="inline-flex items-center gap-1 rounded-full bg-primary-soft px-2 py-0.5 font-medium text-primary">
                       <Sparkles className="size-3" /> Rekommenderad

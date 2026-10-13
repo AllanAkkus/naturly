@@ -95,8 +95,8 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
   return (
     <div className="mx-auto flex max-w-3xl flex-col gap-5">
       <div className="flex flex-col gap-3">
-        <Link to={`/modul/${module.id}`} className="inline-flex items-center gap-1 text-sm text-muted hover:text-foreground">
-          <ArrowLeft className="size-4" /> Modul {module.number}: {module.title}
+        <Link to={`/lektion/${lesson.id}`} className="inline-flex items-center gap-1 text-sm text-muted hover:text-foreground">
+          <ArrowLeft className="size-4" /> Tillbaka till lärobokssidan
         </Link>
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>

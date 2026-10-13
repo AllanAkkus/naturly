@@ -132,10 +132,20 @@ export type QuestionType = Question['type']
 
 export type CurriculumArea = 'natur' | 'kropp' | 'omvarld' | 'metod'
 
+/** Lärobokens delar (de stora ämnena), t.ex. Kemi eller Biologi. */
+export type BookPart = 'kemi' | 'hallbarhet' | 'cell' | 'kropp' | 'evolution' | 'samhalle' | 'metod'
+
 export interface Flashcard {
   id: string
   front: string
   back: string
+}
+
+export interface Misconception {
+  /** Det många tror. */
+  myth: string
+  /** Hur det egentligen är – och varför. */
+  truth: string
 }
 
 export interface Lesson {
@@ -143,7 +153,20 @@ export interface Lesson {
   id: string
   moduleId: string
   title: string
+  /** Avsnitt inom kapitlet, t.ex. "Atomens delar". Lektioner med samma avsnitt ska ligga i följd. */
+  section?: string
   minutes: number
+  /* ── Lärobokssidan: en patient lärare som förklarar EN sak ── */
+  /** 1. Vad är det? Förklaras från noll – inga oförklarade ord. */
+  what: string[]
+  /** 2. Varför finns det / varför händer det? */
+  why: string[]
+  /** 3. Hur fungerar det? */
+  how: string[]
+  /** 4. Var möter vi det – i vardagen, kroppen, naturen, samhället. */
+  where: string[]
+  /** Vanliga missförstånd. */
+  misconceptions: Misconception[]
   /** Steg 1 – ett enkelt lärandemål. */
   goal: string
   objectives: string[]
@@ -199,6 +222,7 @@ export interface Module {
   description: string
   icon: string
   tone: Tone
+  part: BookPart
   areas: CurriculumArea[]
   status: 'complete' | 'in-progress'
   lessons: AnyLesson[]

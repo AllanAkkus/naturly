@@ -1,0 +1,297 @@
+import { explain, fill, lesson, match, mcq, order, test, tf } from '../builders'
+
+export const m11b = [
+  lesson({
+    id: 'm11-l05',
+    title: 'Genteknik',
+    section: 'Genteknik',
+    minutes: 10,
+    goal: 'Idag ska vi förstå hur man kan flytta en gen från en organism till en annan.',
+    objectives: ['Förklara vad genteknik är.', 'Beskriva hur bakterier kan fås att tillverka insulin.', 'Förklara varför det fungerar mellan olika arter.'],
+    prerequisites: ['m11-l01', 'm5-l17'],
+    curriculum: ['bioteknik'],
+    what: [
+      '**Genteknik** betyder att man ändrar en organisms arvsmassa direkt – till exempel genom att flytta en gen från en art till en annan.',
+    ],
+    why: [
+      'Det fungerar för att **den genetiska koden är nästan likadan i alla organismer**. En bakteries ribosomer kan läsa en människogen och bygga samma protein som en människocell skulle bygga.',
+      'Förr fick personer med diabetes insulin från grisar och kor. Det räckte inte till alla och kunde ge allergiska reaktioner. Med genteknik kan bakterier eller jäst tillverka **exakt mänskligt insulin** i stora mängder.',
+    ],
+    how: [
+      '1) Man tar fram genen för insulin. 2) Man klipper upp en **plasmid** – en liten ring av DNA i bakterier – med ett enzym som fungerar som sax. 3) Genen sätts in i plasmiden. 4) Plasmiden förs in i bakterier. 5) Bakterierna förökar sig i stora tankar och tillverkar insulin, som renas fram.',
+      'Samma metod används för tillväxthormon, vissa vaccin och enzymer till tvättmedel.',
+    ],
+    where: [
+      'Nästan allt insulin som används i dag tillverkas av genmodifierade bakterier eller jästceller.',
+      'Gentekniskt framställda enzymer finns i tvättmedel, ost och juice.',
+    ],
+    misconceptions: [
+      { myth: 'Insulin från bakterier är "bakterieinsulin".', truth: 'Det är exakt samma protein som människans insulin, eftersom det byggs efter människans gen.' },
+    ],
+    simple: [
+      'Genteknik är att ändra eller flytta gener.',
+      'Bakterier kan få människans insulingen och tillverka insulin.',
+      'Det fungerar för att den genetiska koden är nästan likadan i allt liv.',
+    ],
+    detailed: [
+      'Enzymerna som klipper DNA kallas restriktionsenzymer och upptäcktes i bakterier, där de skyddar mot virus.',
+      'Ett annat enzym, ligas, "klistrar" ihop DNA-bitarna.',
+      'Den första gentekniskt framställda medicinen, mänskligt insulin, godkändes 1982.',
+    ],
+    visual: {
+      kind: 'flow',
+      layout: 'line',
+      nodes: [
+        { label: 'Gen', detail: 'Människans insulingen tas fram.', icon: '🧬' },
+        { label: 'Klipp', detail: 'Ett enzym klipper upp plasmiden.', icon: '✂️' },
+        { label: 'Klistra', detail: 'Genen sätts in i plasmiden.', icon: '🩹' },
+        { label: 'In i bakterien', detail: 'Plasmiden förs in i bakterier.', icon: '🦠' },
+        { label: 'Insulin', detail: 'Bakterierna förökar sig och tillverkar insulin.', icon: '💉' },
+      ],
+      caption: 'Så tillverkas insulin med genteknik.',
+    },
+    analogy: {
+      text: 'Tänk dig att alla levande organismer använder samma språk i sina kokböcker. Då kan man klippa ut ett recept ur människans kokbok och klistra in det i en bakteries kokbok. Bakteriens kök (ribosomerna) läser receptet och lagar exakt samma rätt.',
+      limits: 'I verkligheten måste man ofta anpassa genen lite, t.ex. ta bort delar som bakterier inte kan hantera.',
+    },
+    alternatives: ['Klipp ut gen → klistra in i plasmid → låt bakterier jobba.'],
+    caveats: ['Processen är förenklad; i praktiken krävs många steg för att rena och kontrollera produkten.'],
+    check: mcq('Varför kan en bakterie tillverka människans insulin?', ['Den genetiska koden är nästan likadan i alla organismer', 'Bakterier är människoceller', 'Insulin finns i alla bakterier'], 0, 'Samma kod läses likadant.'),
+    followUp: tf('En plasmid är en liten ring av DNA i bakterier.', true, 'Den används som "transportbil" för gener.'),
+    apply: order('Sätt stegen i ordning.', ['Ta fram genen', 'Klipp upp plasmiden', 'Sätt in genen i plasmiden', 'För in plasmiden i bakterier', 'Bakterierna tillverkar insulin'], 'Genteknik steg för steg.', { d: 2 }),
+    practice: [
+      fill('En liten ring av DNA i bakterier kallas ____.', ['plasmid'], 'Plasmid.'),
+      tf('Insulin från bakterier är ett annat ämne än människans insulin.', false, 'Det är exakt samma protein.'),
+      mcq('Varför var det en förbättring att tillverka insulin med genteknik?', ['Det blev exakt mänskligt insulin i stora mängder', 'Det blev godare', 'Det blev en tablett'], 0, 'Mer, renare och mindre allergiskt.', { d: 2 }),
+      explain('Förklara vad genteknik är och ge ett exempel.', 'Genteknik är att ändra en organisms arvsmassa, t.ex. genom att flytta en gen från en art till en annan. Ett exempel är att människans insulingen sätts in i bakterier som sedan tillverkar insulin.', [['gen', 'arvsmassa', 'dna'], ['flytta', 'ändra', 'sätta in'], ['insulin', 'bakterie']], { min: 3, d: 2 }),
+    ],
+    summary: ['Genteknik ändrar arvsmassan direkt.', 'Gener kan flyttas mellan arter.', 'Bakterier tillverkar mänskligt insulin.', 'Den genetiska koden är gemensam för allt liv.'],
+    flashcards: [['Vad är genteknik?', 'Metoder för att ändra en organisms arvsmassa.'], ['Vad är en plasmid?', 'En liten ring av DNA i bakterier.']],
+    related: ['genteknik', 'plasmid', 'insulin'],
+  }),
+
+  lesson({
+    id: 'm11-l06',
+    title: 'GMO',
+    section: 'Genteknik',
+    minutes: 9,
+    goal: 'Idag ska vi förstå vad GMO är och vilka för- och nackdelar som diskuteras.',
+    objectives: ['Förklara vad en GMO är.', 'Ge exempel på genmodifierade grödor.', 'Beskriva argument för och emot GMO.'],
+    prerequisites: ['m11-l05'],
+    curriculum: ['bioteknik', 'etik'],
+    what: [
+      '**GMO** står för **genetiskt modifierad organism** – en organism vars gener har ändrats med genteknik.',
+      'Exempel är **majs och bomull** som fått en gen som gör dem giftiga för vissa skadeinsekter, och **gyllene ris** som fått gener som gör att det bildar A-vitamin.',
+    ],
+    why: [
+      'Med genteknik kan man ge grödor egenskaper som tar lång tid – eller är omöjliga – att få fram genom vanlig förädling: tålighet mot torka, skadedjur eller sjukdomar, eller mer näring.',
+      'Gyllene ris togs fram eftersom A-vitaminbrist gör att hundratusentals barn varje år blir blinda, särskilt där ris är huvudfödan.',
+    ],
+    how: [
+      '**Argument för**: högre skördar, mindre bekämpningsmedel, grödor som klarar ett varmare klimat, mer näringsrik mat.',
+      '**Argument emot**: risk att gener sprids till vilda växter, att skadeinsekter blir resistenta, att få stora företag äger utsädet och att långsiktiga effekter på ekosystem är svåra att förutse.',
+      'Stora vetenskapliga genomgångar har inte funnit att godkända GMO-livsmedel är farligare att äta än vanliga livsmedel. Debatten handlar mycket om miljö, ekonomi och etik.',
+    ],
+    where: [
+      'I EU är reglerna strikta, och GMO-livsmedel måste märkas. I till exempel USA är genmodifierad majs och soja mycket vanligt.',
+      'Även djur kan genmodifieras, t.ex. laxar som växer snabbare.',
+    ],
+    misconceptions: [
+      { myth: 'Vanliga grödor har aldrig fått ändrade gener.', truth: 'All förädling – att välja ut de bästa plantorna – ändrar generna. Skillnaden med GMO är metoden och hur exakt det görs.' },
+    ],
+    simple: [
+      'GMO = genetiskt modifierad organism.',
+      'Exempel: insektsresistent majs och gyllene ris.',
+      'Det finns argument både för och emot.',
+    ],
+    detailed: [
+      'Vanlig förädling kan också använda strålning eller kemikalier för att framkalla slumpmässiga mutationer – det räknas oftast inte som GMO.',
+      'Med nya metoder som CRISPR kan man ändra gener utan att föra in främmande DNA, vilket har ändrat diskussionen om regler.',
+      'Bt-majs innehåller en gen från bakterien Bacillus thuringiensis, som bildar ett protein som är giftigt för vissa insektslarver men inte för människor.',
+    ],
+    visual: {
+      kind: 'compare',
+      columns: [
+        { title: 'Argument för', points: ['Högre skördar', 'Mindre bekämpningsmedel', 'Tål torka och värme', 'Mer näring (gyllene ris)'], tone: 'green' },
+        { title: 'Argument emot', points: ['Gener kan spridas', 'Resistenta skadeinsekter', 'Få företag äger utsädet', 'Svårt att förutse långsiktiga effekter'], tone: 'pink' },
+      ],
+      caption: 'GMO-debatten.',
+    },
+    analogy: {
+      text: 'Vanlig växtförädling är som att blanda två kortlekar och hoppas få en bra hand. Genteknik är som att plocka ut exakt det kort man vill ha och lägga till det. Det är snabbare och mer exakt – men frågan är vad som händer med resten av spelet.',
+      limits: 'Kortspel påverkar bara spelarna. Växter ingår i ekosystem där effekterna kan bli svåra att förutse.',
+    },
+    alternatives: ['GMO = gener ändrade med genteknik, inte med vanlig förädling.'],
+    caveats: ['Vad som räknas som GMO skiljer sig mellan olika länders lagar.'],
+    check: mcq('Vad betyder GMO?', ['Genetiskt modifierad organism', 'Godkänd mat-organism', 'Gammal mikroorganism'], 0, 'Genetiskt modifierad organism.'),
+    followUp: tf('Gyllene ris har fått gener för att bilda A-vitamin.', true, 'Mot A-vitaminbrist.'),
+    apply: mcq('Vilket är ett argument emot GMO?', ['Gener kan spridas till vilda växter', 'Högre skördar', 'Mindre bekämpningsmedel'], 0, 'Risk för spridning.', { d: 2 }),
+    practice: [
+      match('För eller emot?', [['Tål torka', 'För'], ['Resistenta skadeinsekter', 'Emot'], ['Mindre bekämpningsmedel', 'För'], ['Få företag äger utsädet', 'Emot']], 'Båda sidor.'),
+      tf('Vanlig förädling ändrar också växters gener.', true, 'Men på ett annat sätt.', { d: 2 }),
+      fill('I EU måste GMO-livsmedel ____.', ['märkas', 'märkas ut'], 'De måste märkas.'),
+      explain('Ge ett argument för och ett emot GMO-grödor.', 'För: grödor kan göras tåliga mot skadedjur eller torka, vilket ger högre skördar och mindre bekämpningsmedel. Emot: gener kan spridas till vilda växter och det är svårt att förutse effekter på ekosystem.', [['skörd', 'torka', 'skadedjur', 'näring', 'bekämpningsmedel'], ['sprid', 'resistens', 'ekosystem', 'företag']], { min: 2, d: 3 }),
+    ],
+    summary: ['GMO = organism ändrad med genteknik.', 'Exempel: Bt-majs, gyllene ris.', 'För: skördar, näring, mindre gift.', 'Emot: spridning, resistens, ekonomi, osäkerhet.'],
+    flashcards: [['Vad är en GMO?', 'En organism vars gener ändrats med genteknik.'], ['Vad är gyllene ris?', 'Ris som genmodifierats för att bilda A-vitamin.']],
+    related: ['gmo', 'genteknik', 'etik'],
+  }),
+
+  lesson({
+    id: 'm11-l07',
+    title: 'CRISPR – gensaxen',
+    section: 'Genteknik',
+    minutes: 9,
+    goal: 'Idag ska vi förstå hur gensaxen CRISPR fungerar och vad den kan användas till.',
+    objectives: ['Förklara hur CRISPR klipper DNA.', 'Ge exempel på användningar.', 'Förklara varför CRISPR väcker etiska frågor.'],
+    prerequisites: ['m11-l05'],
+    curriculum: ['bioteknik', 'etik'],
+    what: [
+      '**CRISPR** (ofta kallad **gensaxen**) är en metod för att ändra DNA på en **exakt plats**. Den är snabbare, billigare och mer precis än tidigare metoder.',
+      'Emmanuelle Charpentier och Jennifer Doudna fick **Nobelpriset i kemi 2020** för upptäckten. Charpentier arbetade då vid Umeå universitet.',
+    ],
+    why: [
+      'CRISPR kommer ursprungligen från bakteriers immunförsvar mot virus. Bakterierna sparar bitar av virus-DNA och använder dem som "efterlysningsbilder" för att hitta och klippa sönder viruset om det kommer igen. Forskarna insåg att man kunde använda systemet för att klippa vilket DNA som helst.',
+    ],
+    how: [
+      '1) Man tillverkar en kort RNA-bit som passar exakt mot den plats i DNA man vill ändra – en "adresslapp". 2) RNA-biten leder ett klippenzym (Cas9) till rätt plats. 3) Enzymet klipper DNA:t. 4) Cellen försöker laga klippet. Då kan genen stängas av, ändras eller en ny bit sättas in.',
+    ],
+    where: [
+      'Den första CRISPR-behandlingen godkändes 2023, mot de ärftliga blodsjukdomarna sicklecellanemi och beta-talassemi.',
+      'Forskare använder CRISPR för att ta fram grödor som tål sjukdomar och för att förstå vad olika gener gör.',
+      '2018 påstod en forskare i Kina att han ändrat gener hos embryon som sedan föddes. Det fördömdes över hela världen och han dömdes till fängelse.',
+    ],
+    misconceptions: [
+      { myth: 'Med CRISPR kan man designa barn med vilka egenskaper som helst.', truth: 'De flesta egenskaper påverkas av hundratals gener och miljön. Dessutom är det förbjudet i de flesta länder att ändra ärftliga gener hos människor.' },
+    ],
+    simple: [
+      'CRISPR är en gensax som klipper DNA på exakt rätt ställe.',
+      'Den kommer från bakteriers försvar mot virus.',
+      'Den kan användas för att behandla ärftliga sjukdomar och förbättra grödor.',
+    ],
+    detailed: [
+      'Det är skillnad på att ändra gener i kroppens vanliga celler (ärvs inte) och i könsceller eller embryon (ärvs av kommande generationer).',
+      'CRISPR kan ibland klippa på fel ställe ("off-target"), vilket är en säkerhetsrisk som forskare arbetar med.',
+      'Med CRISPR kan man också slå av gener i försöksdjur för att se vad generna gör.',
+    ],
+    visual: {
+      kind: 'flow',
+      layout: 'line',
+      nodes: [
+        { label: 'Adresslapp', detail: 'Ett RNA som passar mot rätt plats i DNA.', icon: '🏷️' },
+        { label: 'Leta', detail: 'RNA:t leder enzymet Cas9 till rätt plats.', icon: '🔍' },
+        { label: 'Klipp', detail: 'Cas9 klipper DNA:t.', icon: '✂️' },
+        { label: 'Laga', detail: 'Cellen lagar – genen stängs av eller ändras.', icon: '🩹' },
+      ],
+      caption: 'Så fungerar CRISPR.',
+    },
+    analogy: {
+      text: 'CRISPR är som funktionen "sök och ersätt" i ett skrivprogram. Du skriver in exakt vilket ord du letar efter (RNA-adresslappen), programmet hittar det i en text med miljarder bokstäver (DNA:t), och du kan ta bort eller byta ut det.',
+      limits: 'Ett skrivprogram gör aldrig fel. CRISPR kan ibland klippa på liknande ställen, och cellens lagning blir inte alltid som man tänkt.',
+    },
+    alternatives: ['CRISPR = adresslapp + sax.'],
+    caveats: ['Tekniken utvecklas snabbt och reglerna diskuteras fortfarande.'],
+    check: mcq('Vad gör CRISPR?', ['Klipper DNA på en exakt plats', 'Kopierar hela kroppen', 'Bildar antikroppar'], 0, 'En gensax.'),
+    followUp: tf('CRISPR kommer från bakteriers försvar mot virus.', true, 'Ett bakteriellt immunsystem.'),
+    apply: mcq('Varför är det mer omdiskuterat att ändra gener i ett embryo än i en vuxens blodceller?', ['Ändringen ärvs av kommande generationer', 'Embryon har inget DNA', 'Det är billigare'], 0, 'Ärftliga förändringar påverkar framtida människor.', { d: 2 }),
+    practice: [
+      order('Sätt i ordning.', ['RNA-adresslapp tillverkas', 'RNA leder enzymet rätt', 'DNA klipps', 'Cellen lagar DNA:t'], 'CRISPR steg för steg.'),
+      tf('Med CRISPR kan man enkelt designa barns intelligens.', false, 'De flesta egenskaper beror på många gener och miljö.'),
+      fill('Nobelpriset för CRISPR delades ut år ____.', ['2020'], 'År 2020.', { numeric: true }),
+      explain('Förklara hur CRISPR kan användas för att behandla en ärftlig sjukdom.', 'Man tar ut celler från patienten och använder CRISPR för att klippa och ändra den gen som orsakar sjukdomen. De ändrade cellerna förs tillbaka och kan då fungera normalt.', [['klipp', 'ändra'], ['gen'], ['cell'], ['sjukdom', 'behandl']], { min: 3, d: 3 }),
+    ],
+    summary: ['CRISPR är en exakt gensax.', 'Ett RNA leder enzymet till rätt plats.', 'Används mot ärftliga sjukdomar och i växtförädling.', 'Ärftliga ändringar hos människor är förbjudna i de flesta länder.'],
+    flashcards: [['Vad är CRISPR?', 'En genteknisk metod som klipper DNA på exakt rätt ställe.'], ['Vilka fick Nobelpriset för CRISPR?', 'Emmanuelle Charpentier och Jennifer Doudna.']],
+    related: ['crispr', 'genteknik', 'dna'],
+  }),
+
+  lesson({
+    id: 'm11-l08',
+    title: 'Etiska frågor inom bioteknik',
+    section: 'Etik',
+    minutes: 10,
+    goal: 'Idag ska vi lära oss att resonera om etiska frågor inom bioteknik.',
+    objectives: ['Förklara vad en etisk fråga är.', 'Skilja på fakta och värderingar.', 'Föra ett resonemang med argument för och emot.'],
+    prerequisites: ['m11-l06', 'm11-l07'],
+    curriculum: ['etik', 'bioteknik', 'samhalle'],
+    what: [
+      '**Etik** handlar om vad som är **rätt och fel** och hur man bör handla. En etisk fråga kan inte avgöras bara med fakta – den kräver också **värderingar**.',
+      'Inom bioteknik finns många etiska frågor: Får man ändra människors gener? Vem ska äga gener? Är det rätt att genmodifiera djur? Hur mycket risk är acceptabel?',
+    ],
+    why: [
+      'Naturvetenskapen kan berätta **vad som är möjligt** och **vilka följder** något kan få. Men den kan inte ensam säga **vad vi borde göra**. Därför behöver alla – inte bara forskare – kunna resonera om etik.',
+    ],
+    how: [
+      'Ett bra etiskt resonemang: 1) Beskriv frågan och **fakta**. 2) Vilka **berörs**? (människor, djur, natur, framtida generationer) 3) Ge **argument för och emot**. 4) Väg argumenten mot varandra och kom fram till en **egen slutsats** – och visa att du förstår att andra kan tycka annorlunda.',
+      'Några perspektiv: **Konsekvensetik** – vad ger bäst följder för flest? **Pliktetik** – finns det saker man aldrig får göra, oavsett följder? **Rättvisa** – vem får nyttan och vem tar risken?',
+    ],
+    where: [
+      'Statens medicinsk-etiska råd ger råd till regeringen i sådana frågor.',
+      'Forskning på människor och djur måste godkännas av etikprövningsnämnder i Sverige.',
+    ],
+    misconceptions: [
+      { myth: 'Etiska frågor har ett rätt svar som forskare kan räkna ut.', truth: 'Fakta är viktiga, men svaret beror också på värderingar. Därför kan välinformerade personer komma fram till olika slutsatser.' },
+    ],
+    simple: [
+      'Etik handlar om rätt och fel.',
+      'Etiska frågor kräver både fakta och värderingar.',
+      'Ett bra resonemang väger argument för och emot.',
+    ],
+    detailed: [
+      'Försiktighetsprincipen säger att man ska vara försiktig när följderna är osäkra och kan bli allvarliga.',
+      'Fosterdiagnostik och embryoval är exempel på frågor där teknik, hälsa och värderingar möts.',
+      'Djurförsök regleras av de tre R:en: ersätta (replace), minska (reduce) och förfina (refine).',
+    ],
+    visual: {
+      kind: 'flow',
+      layout: 'line',
+      nodes: [
+        { label: 'Fakta', detail: 'Vad är möjligt? Vilka följder kan det få?', icon: '📚' },
+        { label: 'Berörda', detail: 'Människor, djur, natur, framtida generationer.', icon: '👥' },
+        { label: 'Argument', detail: 'För och emot, från olika perspektiv.', icon: '⚖️' },
+        { label: 'Slutsats', detail: 'Väg och ta ställning – respektera andras åsikter.', icon: '💬' },
+      ],
+      caption: 'Att föra ett etiskt resonemang.',
+    },
+    analogy: {
+      text: 'Ett etiskt resonemang är som att använda en våg. Fakta bestämmer vad som läggs i vågskålarna, men dina värderingar avgör hur tungt varje sak väger. Två personer med samma fakta kan därför få vågen att väga åt olika håll.',
+      limits: 'En våg ger ett exakt svar. Etik ger sällan ett exakt svar – det handlar om att resonera väl.',
+    },
+    alternatives: ['Fakta: vad kan vi göra? Etik: vad bör vi göra?'],
+    caveats: ['Det finns många fler etiska teorier än de som nämns här.'],
+    check: mcq('Vad krävs för att besvara en etisk fråga?', ['Bara fakta', 'Både fakta och värderingar', 'Bara åsikter'], 1, 'Fakta och värderingar.'),
+    followUp: tf('Naturvetenskap kan ensam avgöra vad vi bör göra.', false, 'Värderingar behövs också.'),
+    apply: mcq('Vilket är ett exempel på ett konsekvensetiskt argument?', ['Det ger bäst hälsa för flest människor', 'Man får aldrig ändra naturen', 'Det är förbjudet i min religion'], 0, 'Följderna avgör.', { d: 2 }),
+    practice: [
+      order('Sätt resonemangets steg i ordning.', ['Beskriv frågan och fakta', 'Vilka berörs?', 'Argument för och emot', 'Väg och dra en slutsats'], 'Ett strukturerat resonemang.'),
+      match('Fakta eller värdering?', [['Gyllene ris innehåller A-vitamin', 'Fakta'], ['Det är fel att ändra växters gener', 'Värdering'], ['CRISPR kan klippa DNA', 'Fakta']], 'Skilj på dem.'),
+      fill('Vid osäkra men allvarliga risker gäller ____-principen.', ['försiktighets'], 'Försiktighetsprincipen.', { d: 2 }),
+      explain('Ta ställning i frågan om man bör få använda CRISPR för att bota ärftliga sjukdomar hos vuxna. Ge argument för och emot.', 'För: det kan bota svåra sjukdomar och minska lidande, och ändringen ärvs inte om den görs i kroppens celler. Emot: tekniken kan klippa fel, den är dyr så alla får kanske inte tillgång, och långsiktiga effekter är okända. Jag anser att det är rätt om säkerheten är god, eftersom nyttan för patienten är stor.', [['bota', 'sjukdom', 'lidande'], ['risk', 'fel', 'okänd', 'säker'], ['dyr', 'rättvis', 'tillgång'], ['anser', 'tycker', 'slutsats']], { min: 3, d: 3 }),
+    ],
+    summary: ['Etik handlar om rätt och fel.', 'Fakta + värderingar behövs.', 'Väg argument för och emot.', 'Olika perspektiv: följder, plikter, rättvisa.'],
+    flashcards: [['Vad är en etisk fråga?', 'En fråga om vad som är rätt eller fel att göra.'], ['Vad är konsekvensetik?', 'Att handlingens följder avgör om den är rätt.']],
+    related: ['etik', 'gmo', 'crispr'],
+  }),
+
+  test({
+    id: 'm11-test',
+    title: 'Repetitionsprov: Bioteknik',
+    minutes: 15,
+    goal: 'Idag ska vi testa vad du kan om bioteknik.',
+    description: 'Blandade frågor om hela kapitlet.',
+    prerequisites: ['m11-l08'],
+    questions: [
+      mcq('Vad är bioteknik?', ['Att använda levande organismer till nytta', 'Att bygga datorer', 'Att mäta temperatur'], 0, 'Levande organismer som verktyg.', { c: ['m11-l01'] }),
+      mcq('Vad bildas vid alkoholjäsning?', ['Etanol och koldioxid', 'Syre och socker', 'Mjölksyra'], 0, 'Etanol och CO₂.', { c: ['m11-l02'] }),
+      mcq('Vilka bakterier gör yoghurt?', ['Mjölksyrabakterier', 'Kvävefixerande bakterier', 'Cyanobakterier'], 0, 'Mjölksyrabakterier.', { c: ['m11-l03'] }),
+      tf('Alger bildar ungefär hälften av jordens syre.', true, 'Tillsammans med växtplankton.', { c: ['m11-l04'] }),
+      order('Genteknik för insulin.', ['Ta fram genen', 'Sätt in i plasmid', 'För in i bakterier', 'Bakterier tillverkar insulin'], 'Steg för steg.', { c: ['m11-l05'] }),
+      mcq('Vad är gyllene ris?', ['Ris med gener för A-vitamin', 'Ris odlat i Asien', 'Ris med guld'], 0, 'Mot A-vitaminbrist.', { c: ['m11-l06'] }),
+      mcq('Vad är CRISPR?', ['En gensax', 'Ett vaccin', 'En bakterie som gör yoghurt'], 0, 'Klipper DNA exakt.', { c: ['m11-l07'] }),
+      match('Fakta eller värdering?', [['Insulin kan tillverkas av bakterier', 'Fakta'], ['Det är fel att genmodifiera djur', 'Värdering']], 'Skilj på dem.', { c: ['m11-l08'] }),
+      tf('Biogas bildas av bakterier i syrefria tankar.', true, 'Metan från matavfall.', { c: ['m11-l03'] }),
+      fill('En liten ring av DNA i bakterier kallas ____.', ['plasmid'], 'Plasmid.', { c: ['m11-l05'] }),
+      explain('Ge ett exempel på hur bioteknik kan bidra till hållbar utveckling.', 'Bakterier kan bryta ned matavfall till biogas som ersätter fossila bränslen. Det minskar utsläppen av koldioxid och tar tillvara avfall.', [['biogas', 'alg', 'biobränsle', 'enzym'], ['fossil', 'utsläpp', 'koldioxid'], ['avfall', 'resurs', 'hållbar']], { min: 2, d: 3, c: ['m11-l03'] }),
+    ],
+  }),
+]
