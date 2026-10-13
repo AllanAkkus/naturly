@@ -348,14 +348,16 @@ function FillInput({ q, disabled, onSubmit }: InputProps<'fill'>) {
 }
 
 function MatchInput({ q, disabled, onSubmit }: InputProps<'match'>) {
-  const rights = useMemo(() => seededShuffle(q.pairs.map((p) => p[1]), q.id), [q])
+  // Högerledet kan innehålla samma text flera gånger (t.ex. sortera i kategorier), så vi spårar position.
+  const rights = useMemo(() => seededShuffle(q.pairs.map((p, i) => ({ text: p[1], key: i })), q.id), [q])
   const [left, setLeft] = useState<number | null>(null)
-  const [pairs, setPairs] = useState<Record<number, string>>({})
+  const [pairs, setPairs] = useState<Record<number, number>>({})
   const used = new Set(Object.values(pairs))
   const done = Object.keys(pairs).length === q.pairs.length
+  const textOf = (k: number) => q.pairs[k][1]
   const check = () => {
-    const correct = q.pairs.every(([, r], i) => pairs[i] === r)
-    onSubmit({ correct, given: q.pairs.map(([l], i) => `${l} – ${pairs[i]}`).join(', ') })
+    const correct = q.pairs.every(([, r], i) => pairs[i] !== undefined && textOf(pairs[i]) === r)
+    onSubmit({ correct, given: q.pairs.map(([l], i) => `${l} – ${pairs[i] !== undefined ? textOf(pairs[i]) : '?'}`).join(', ') })
   }
   return (
     <div className="flex flex-col gap-3">
@@ -367,31 +369,32 @@ function MatchInput({ q, disabled, onSubmit }: InputProps<'match'>) {
               key={i}
               type="button"
               disabled={disabled}
+              aria-pressed={left === i}
               onClick={() => setLeft(i)}
-              className={cn('rounded-2xl border px-3 py-2.5 text-left text-sm', left === i ? 'border-primary bg-primary-soft' : pairs[i] ? 'border-green bg-green-soft/60' : 'border-border bg-surface')}
+              className={cn('rounded-2xl border px-3 py-2.5 text-left text-sm', left === i ? 'border-primary bg-primary-soft' : pairs[i] !== undefined ? 'border-green bg-green-soft/60' : 'border-border bg-surface')}
             >
               <RichText text={l} />
-              {pairs[i] && <span className="mt-0.5 block text-xs text-muted">→ {pairs[i]}</span>}
+              {pairs[i] !== undefined && <span className="mt-0.5 block text-xs text-muted">→ {textOf(pairs[i])}</span>}
             </button>
           ))}
         </div>
         <div className="flex flex-col gap-2">
           {rights.map((r) => (
             <button
-              key={r}
+              key={r.key}
               type="button"
               disabled={disabled || left === null}
               onClick={() => {
                 if (left === null) return
                 setPairs((p) => {
-                  const next = Object.fromEntries(Object.entries(p).filter(([, v]) => v !== r))
-                  return { ...next, [left]: r }
+                  const next = Object.fromEntries(Object.entries(p).filter(([, v]) => v !== r.key)) as Record<number, number>
+                  return { ...next, [left]: r.key }
                 })
                 setLeft(null)
               }}
-              className={cn('rounded-2xl border px-3 py-2.5 text-left text-sm', used.has(r) ? 'border-green/50 bg-green-soft/40' : 'border-border bg-surface', left !== null && 'hover:border-primary')}
+              className={cn('rounded-2xl border px-3 py-2.5 text-left text-sm', used.has(r.key) ? 'border-green/50 bg-green-soft/40' : 'border-border bg-surface', left !== null && 'hover:border-primary')}
             >
-              <RichText text={r} />
+              <RichText text={r.text} />
             </button>
           ))}
         </div>

@@ -1,7 +1,9 @@
 import type { AnyLesson, Lesson, Module, Question, TestLesson } from './types'
 import { module1 } from './modules/m01'
+import { module2 } from './modules/m02'
+import { module3 } from './modules/m03'
 
-export const MODULES: Module[] = [module1]
+export const MODULES: Module[] = [module1, module2, module3]
 
 export const ALL_LESSONS: AnyLesson[] = MODULES.flatMap((m) => m.lessons)
 
