@@ -1,0 +1,255 @@
+@import 'tailwindcss';
+@import 'katex/dist/katex.min.css';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #fbf8f3;
+  --surface: #ffffff;
+  --surface-2: #f5f0fa;
+  --foreground: #2b2a33;
+  --muted: #6c6879;
+  --border: #e9e3ee;
+  --ring: #8b7fd6;
+
+  --primary: #7c6fd0;
+  --primary-soft: #ece8fb;
+  --primary-foreground: #ffffff;
+  --pink: #e58fa9;
+  --pink-soft: #fbe8ee;
+  --blue: #6c9be0;
+  --blue-soft: #e6effc;
+  --cream: #f6ecd9;
+  --cream-soft: #fbf5ea;
+  --green: #5ba882;
+  --green-soft: #e3f3ea;
+  --amber: #d79a3c;
+  --amber-soft: #fbf0dc;
+  --danger: #cf5c6f;
+  --danger-soft: #fbe6ea;
+
+  --proton: #e0607e;
+  --neutron: #5f8fd8;
+  --electron: #7c6fd0;
+
+  --cat-alkali: #f7d4d9;
+  --cat-alkaline: #f8e2c8;
+  --cat-transition: #e4def6;
+  --cat-post: #d7e6f5;
+  --cat-metalloid: #d9efe5;
+  --cat-nonmetal: #e0f1d3;
+  --cat-halogen: #f6eec4;
+  --cat-noble: #d6e8fa;
+  --cat-lanthanide: #f4dcef;
+  --cat-actinide: #efdcdc;
+  --cat-unknown: #ebe9ee;
+
+  /* Diagramfärger – validerade för färgblindhet och kontrast (dataviz-validatorn) */
+  --chart-1: #6f5fd0;
+  --chart-2: #d6517a;
+  --chart-3: #2f80d0;
+  --chart-4: #1f9466;
+  --chart-5: #b97510;
+
+  --radius: 1rem;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-display: 'Fraunces', Georgia, serif;
+  --letter: normal;
+  --word: normal;
+  --line: 1.6;
+}
+
+.dark {
+  --background: #17161d;
+  --surface: #211f2a;
+  --surface-2: #2a2735;
+  --foreground: #efecf5;
+  --muted: #aaa4b8;
+  --border: #353142;
+  --ring: #a99ef0;
+
+  --primary: #a99ef0;
+  --primary-soft: #312b4d;
+  --primary-foreground: #17161d;
+  --pink: #f0a2b9;
+  --pink-soft: #45283a;
+  --blue: #8db4ef;
+  --blue-soft: #233350;
+  --cream: #463e2e;
+  --cream-soft: #2c2820;
+  --green: #7cc8a1;
+  --green-soft: #213a2e;
+  --amber: #e8b465;
+  --amber-soft: #3f321d;
+  --danger: #ef8d9c;
+  --danger-soft: #45232b;
+
+  --proton: #f07e98;
+  --neutron: #7fa9ea;
+  --electron: #b3a9f5;
+
+  --chart-1: #8d7ff0;
+  --chart-2: #e0557f;
+  --chart-3: #3f8fe0;
+  --chart-4: #2fa370;
+  --chart-5: #bb8010;
+
+  --cat-alkali: #4a2a31;
+  --cat-alkaline: #4a3725;
+  --cat-transition: #352e52;
+  --cat-post: #24364a;
+  --cat-metalloid: #22403a;
+  --cat-nonmetal: #2e4325;
+  --cat-halogen: #4a4322;
+  --cat-noble: #233a52;
+  --cat-lanthanide: #482a45;
+  --cat-actinide: #452c2c;
+  --cat-unknown: #33313a;
+}
+
+.hc {
+  --background: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f2f2f2;
+  --foreground: #000000;
+  --muted: #2b2b2b;
+  --border: #000000;
+  --primary: #3d2fa3;
+  --primary-soft: #e3dffc;
+}
+.dark.hc {
+  --background: #000000;
+  --surface: #000000;
+  --surface-2: #141414;
+  --foreground: #ffffff;
+  --muted: #e6e6e6;
+  --border: #ffffff;
+  --primary: #c8c0ff;
+  --primary-soft: #2a2550;
+}
+
+.dyslexia {
+  --font-body: 'Lexend', 'Inter', system-ui, sans-serif;
+  --font-display: 'Lexend', 'Inter', system-ui, sans-serif;
+}
+.wide-spacing {
+  --letter: 0.03em;
+  --word: 0.12em;
+  --line: 1.9;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-pink: var(--pink);
+  --color-pink-soft: var(--pink-soft);
+  --color-blue: var(--blue);
+  --color-blue-soft: var(--blue-soft);
+  --color-cream: var(--cream);
+  --color-cream-soft: var(--cream-soft);
+  --color-green: var(--green);
+  --color-green-soft: var(--green-soft);
+  --color-amber: var(--amber);
+  --color-amber-soft: var(--amber-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-proton: var(--proton);
+  --color-neutron: var(--neutron);
+  --color-electron: var(--electron);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+  --radius-xl: calc(var(--radius) * 0.75);
+  --radius-2xl: var(--radius);
+  --radius-3xl: calc(var(--radius) * 1.5);
+}
+
+html {
+  font-size: calc(16px * var(--text-scale, 1));
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  letter-spacing: var(--letter);
+  word-spacing: var(--word);
+  line-height: var(--line);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
+
+.reduce-motion *,
+.reduce-motion *::before,
+.reduce-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.orbit {
+  transform-origin: center;
+  transform-box: view-box;
+  animation: orbit var(--orbit-duration, 24s) linear infinite;
+}
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.paused .orbit {
+  animation-play-state: paused;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.katex {
+  font-size: 1.08em;
+}
